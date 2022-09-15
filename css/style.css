@@ -224,11 +224,11 @@
   left: 0;
 }
 /* pop_up_ct > button */
-.previous_btt {
+.pop_prev_btt {
   display: block;
   width: 35px;
   height: 35px;
-  background-image: url(../img/Icon_top_banner_left.png);
+  background-image: url(../img/Icon_pop_slide_left.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #1c293c;
@@ -237,11 +237,11 @@
   top: calc(50% - 17.5px);
   left: -35px;
 }
-.next_btt {
+.pop_next_btt {
   display: block;
   width: 35px;
   height: 35px;
-  background-image: url(../img/Icon_top_banner_right.png);
+  background-image: url(../img/Icon_pop_slide_right.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #1c293c;
@@ -250,11 +250,11 @@
   top: calc(50% - 17.5px);
   right: -35px;
 }
-.stop_btt {
+.pop_stop_btt {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url(../img/Icon_top_banner_stop.png);
+  background-image: url(../img/Icon_pop_slide_stop.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #1c293c;
@@ -263,11 +263,11 @@
   top: calc(50% - 12px);
   right: 80px;
 }
-.close_btt {
+.pop_close_btt {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url(../img/Icon_top_banner_close.png);
+  background-image: url(../img/Icon_pop_slide_close.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-color: #1c293c;
@@ -276,26 +276,19 @@
   top: calc(50% - 12px);
   right: 34px;
 }
-
-/* ============================== banner */
-#banner {
-  width: 100%;
-  /* 높이 나중에 지우기 */
-  height: 1037px;
-  background-image: url(../img/Banner1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 /* ============================== header */
 header {
   width: 100%;
+  height: 130px;
   position: absolute;
-  top: 0;
+  top: 110px;
+  /* left: 0; */
+  /* 팝업닫기 누르면 맨위로 ! */
+  /* top: 0; */
+  overflow: hidden;
 }
-
-/* header ========== header_bottom */
-.header_bottom {
+/* header > header_top */
+.header_top {
   width: 100%;
   height: 40px;
   padding-right: 35px;
@@ -304,7 +297,7 @@ header {
   align-items: center;
   justify-content: right;
 }
-.header_bottom > a {
+.header_top > a {
   display: inline-block;
   font-size: 15px;
   font-weight: 300;
@@ -315,7 +308,7 @@ header {
   padding-right: 14px;
   position: relative;
 }
-.header_bottom > a:after {
+.header_top > a:after {
   display: inline-block;
   content: "";
   width: 1px;
@@ -325,7 +318,7 @@ header {
   right: 0;
   top: 6px;
 }
-/* header_bottom - lang_box */
+/* header_top > lang_box */
 .lang_box {
   margin-right: 30px;
   position: relative;
@@ -341,7 +334,7 @@ header {
   overflow: hidden;
 }
 .lang {
-  /* 임의설정 */
+  /* display: none; 임의설정 */
   display: none;
   width: 80px;
   margin-left: -40px;
@@ -379,10 +372,10 @@ header {
   display: block;
   background: url(../img/Icon_lang_box_up.png) no-repeat right center;
 }
-/* header_bottom - top_pop_close */
-.top_pop_close {
+/* header_top > close_pop_btt */
+.pop_up_btt {
   padding-right: 28px;
-  background: url(../img/Icon_top_pop_close.png) no-repeat right center;
+  background: url(../img/Icon_pop_up.png) no-repeat right center;
   display: inline-block;
   font-size: 15px;
   font-weight: 300;
@@ -390,7 +383,10 @@ header {
   color: #fff;
   overflow: hidden;
 }
-/* header ========== header_nav */
+/*  */
+/*  */
+/*  */
+/* header > header_nav */
 .header_nav {
   width: 100%;
   height: 90px;
@@ -403,7 +399,7 @@ header {
   left: 35px;
   top: 29.5px;
 }
-/* header_nav - nav */
+/* header_nav > nav */
 .header_nav nav {
   text-align: center;
 }
@@ -425,10 +421,13 @@ header {
   letter-spacing: -1px;
 }
 .gnb > li ul {
-  /* 임시설정 */
+  /* display: none; 임시설정 */
   display: none;
 }
-/* header_nav - nav_util*/
+/*  */
+/*  */
+/*  */
+/* header_nav > nav_util*/
 .nav_util {
   position: absolute;
   right: 45px;
@@ -443,7 +442,7 @@ header {
   width: 36px;
   height: 40px;
   margin-left: 15px;
-  background: url(../img/Icon_top_search.png) no-repeat center;
+  background: url(../img/Icon_nav_search.png) no-repeat center;
   font-size: 15px;
   line-height: 40px;
   text-align: left;
@@ -451,7 +450,7 @@ header {
   text-indent: -999px;
   overflow: hidden;
 }
-/* nav_util - move_airport */
+/* nav_util > move_airport */
 .move_airport {
   display: inline-block;
 }
@@ -470,9 +469,9 @@ header {
   color: #fff;
   overflow: hidden;
 }
-/* move_airport - move_airport_list */
+/* move_airport > move_airport_list */
 .move_airport_list {
-  /* 임의설정 */
+  /* display: none; 임의설정 */
   display: none;
   position: absolute;
   left: 50%;
@@ -513,27 +512,78 @@ header {
   bottom: 25px;
   width: 11px;
   height: 11px;
-  background-image: url(../img/Icon_lang_box_x.png);
+  background-image: url(../img/Icon_lang_box_close.png);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #fff;
   text-indent: -99999px;
 }
-/* ============================== banner_ct */
+/* ============================== banner */
+#banner {
+  width: 100%;
+  /* 높이 나중에 지우기 */
+  height: 1037px;
+  background-image: url(../img/Banner1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* banner > banner_ct */
 .banner_ct {
   max-width: 1180px;
-  height: 764px;
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
   position: relative;
+  padding: 400px 0 0;
 }
-#b-ct1 {
+/* banner_ct > banner_slide_button */
+.banner_slide_button {
   width: 100%;
-  height: 15px;
-  margin: auto;
   position: absolute;
-  top: 205px;
+  top: calc(110px + 205px);
 }
+.banner_slide_button ul {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.banner_slide_button ul li {
+  display: inline-block;
+  margin: 0 11px;
+}
+.banner_slide_button ul li button {
+  display: block;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  text-indent: -99999px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.banner_slide_button ul li button:before {
+  width: 6px;
+  height: 6px;
+  content: "";
+  box-sizing: border-box;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: calc(50% - 3px);
+  top: calc(50% - 3px);
+}
+.banner_slide_button ul li:last-child button:before {
+  content: none;
+}
+.banner_slide_button ul li:last-child button {
+  display: block;
+  width: 7px;
+  height: 15px;
+  text-indent: -9999px;
+  background-image: url(../img/Icon_banner_stop.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
+}
+/*  */
 #b-ct2 {
   width: 400px;
   height: 127px;
