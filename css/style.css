@@ -533,7 +533,6 @@ header {
   max-width: 1180px;
   margin: 0 auto;
   position: relative;
-  padding: 400px 0 0;
 }
 /* banner_ct > banner_slide_button */
 .banner_slide_button {
@@ -545,6 +544,7 @@ header {
   display: block;
   width: 100%;
   text-align: center;
+  font-size: 0;
 }
 .banner_slide_button ul li {
   display: inline-block;
@@ -583,24 +583,109 @@ header {
   background-size: 100% auto;
   background-position: center center;
 }
-/*  */
-#b-ct2 {
-  width: 400px;
-  height: 127px;
-  margin: 100px 390px 0px;
+/* banner_ct > banner_txt */
+.banner_txt {
+  width: 100%;
+  padding: 410px 0 500px;
+  text-align: center;
 }
-#b-ct3 {
-  width: 1000px;
-  height: 112px;
-  margin: 30px 90px 0px;
+.banner_txt p:nth-of-type(1) {
+  color: #fff;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 1em;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
 }
-#b-ct4 {
-  width: 1180px;
-  height: 140px;
-  margin: 163px 0px 30px;
+.banner_txt p:nth-of-type(2) {
+  color: #fff;
+  font-size: 82px;
+  font-weight: bold;
+  line-height: 1em;
+  letter-spacing: -1px;
+  margin-bottom: 0px;
 }
-/*  */
-/*  */
+/* banner_ct > banner_menu */
+.banner_menu {
+  width: 100%;
+  height: auto;
+  margin-top: 65px;
+  font-size: 0;
+  text-align: center;
+  position: absolute;
+  top: 510px;
+}
+.banner_menu a {
+  display: inline-block;
+  width: 168px;
+  /* margin: 0; */
+  text-align: center;
+}
+.banner_menu a span {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 0;
+}
+.banner_menu a span img {
+  margin-top: 20px;
+}
+.banner_menu a b {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1em;
+}
+/* banner_ct > banner_air_search */
+.banner_air_search {
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+}
+/* banner_air_search > air_search */
+.air_search {
+  max-width: 1180px;
+  width: 100%;
+  height: auto;
+  padding: 0 20px;
+  display: inline-block;
+}
+/* air_search > air_search_button */
+.air_search_button {
+  width: 100%;
+  font-size: 0;
+  text-align: left;
+}
+.air_search_button button {
+  background: none;
+  display: inline-block;
+  height: 25px;
+}
+.air_search_button button:nth-of-type(1) {
+  margin-right: 30px;
+}
+.air_search_button button span {
+  display: block;
+  padding-top: 3px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1em;
+}
+.air_search_button button:nth-of-type(1) span {
+  padding-top: 0px;
+  font-size: 25px;
+  font-weight: bold;
+}
 /* ======================================== 컨텐츠 시작 */
 #contents {
   height: 5207.58px;
