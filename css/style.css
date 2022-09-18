@@ -769,9 +769,7 @@ header {
 .air_search_box .ASB_opt {
   width: 100%;
   height: auto;
-  /* display: none; */
-  /* display: block; 임시설정 */
-  display: block;
+  display: none;
 }
 .air_search_box .ASB_opt.on {
   display: block;
@@ -831,9 +829,20 @@ header {
   font-weight: 500;
   line-height: 1em;
   vertical-align: middle;
-  background-image: url(../img/Icon_air_search_time_arr.png);
+  background: #fff url(../img/Icon_air_search_time_arr.png);
   background-repeat: no-repeat;
   background-position: right 10px center;
+}
+.airTime span {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  padding-right: 10px;
+  color: #000;
+  font-size: 20px;
+  line-height: 1em;
+  text-align: center;
+  vertical-align: top;
 }
 .airSection {
   width: 14.5%;
@@ -853,13 +862,52 @@ header {
   line-height: 1em;
   vertical-align: top;
 }
+.weather {
+  display: inline-block;
+  width: 130px;
+  padding-left: 20px;
+  font-size: 0;
+  vertical-align: middle;
+  position: absolute;
+  top: 26px;
+  right: -130px;
+}
+.weather img {
+  display: inline-block;
+  max-width: 100%;
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.weather p {
+  display: inline-block;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  line-height: 1em;
+  position: relative;
+  vertical-align: middle;
+}
+.weather p:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  right: -13px;
+  box-sizing: border-box;
+}
 /* ======================================== 컨텐츠 시작 */
 #contents {
   height: 5207.58px;
 }
 /* ============================== 컨텐츠 1 */
 #content1 {
-  height: 864.6px;
   background-color: #ffffff;
 }
 /* area_1 */

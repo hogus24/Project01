@@ -68,6 +68,11 @@ button {
   background: none;
   cursor: pointer;
 }
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 .cf:after {
   content: "";
   display: block;
