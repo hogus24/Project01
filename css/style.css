@@ -525,7 +525,7 @@ header {
   height: 1037px;
   background-image: url(../img/Banner1.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
 }
 /* banner > banner_ct */
@@ -902,27 +902,33 @@ header {
   right: -13px;
   box-sizing: border-box;
 }
-/* ======================================== 컨텐츠 시작 */
+/* ============================== contents */
 #contents {
+  /* 나중에 높이 지우기 */
   height: 5207.58px;
 }
-/* ============================== 컨텐츠 1 */
+/* ============================== content1 */
 #content1 {
   background-color: #ffffff;
+  width: 100%;
+  height: auto;
 }
-/* area_1 */
-.area_1 {
+/* content1 > area_1 */
+#content1 .area_1 {
   max-width: 1180px;
-  height: 794.58px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
   padding: 70px 0 0;
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
   text-align: center;
-  color: #000;
 }
-/* area_1 - airport_txt */
-.airport_txt p:nth-child(1) {
+/* area_1 > airProcess_txt */
+.airProcess_txt {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.airProcess_txt p:nth-child(1) {
   color: #00589e;
   font-size: 14px;
   font-weight: bold;
@@ -930,128 +936,303 @@ header {
   line-height: 1em;
   margin-bottom: 10px;
 }
-.airport_txt p:nth-child(2) {
-  color: #000;
+.airProcess_txt p:nth-child(2) {
   font-size: 48px;
   font-weight: bold;
   letter-spacing: -0.5px;
   line-height: 1em;
 }
-.airport_txt p:nth-child(3) {
-  color: #000;
+.airProcess_txt p:nth-child(3) {
   font-size: 18px;
   letter-spacing: -0.5px;
   line-height: 1em;
-  margin-top: 15px;
+  padding-top: 15px;
 }
-/* area_1 - airport_time */
-/* airport_time - time*/
-.airport_time .time {
+/* area_1 > airProcess_ct */
+.airProcess_ct {
+  max-width: 1180px;
+  width: 100%;
+  height: auto;
+  margin: 20px auto 0;
+}
+/* airProcess_ct > airProcess_time */
+.airProcess_time {
+  width: 100%;
+}
+/* airProcess_time > processTime */
+.processTime {
+  position: relative;
+  height: 80px;
+}
+.processTime .totalTime {
+  display: block;
   color: #870f69;
   font-size: 80px;
-  line-height: 80px;
   font-weight: bold;
+  line-height: 80px;
+  text-align: center;
 }
-.airport_time .time span {
+.processTime .totalTime span {
   color: #000;
   font-size: 40px;
+  font-weight: bold;
 }
-/* airport_time - time_box */
-.airport_time .time_box {
-  float: right;
-}
-.time_box .international {
-  margin-left: 15px;
-}
-/* airport_time - airport_state */
-.airport_time .air_state {
-  margin: 30px 0 0;
+/* airProcess_time > processState */
+.processState {
   position: relative;
+  margin-top: 30px;
 }
-.air_state .state_1 {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
-  font-size: 22px;
+/* processState > state_current */
+.state_current {
   float: left;
+  font-size: 0;
 }
-.air_state .state_1 #state_time {
+.state_current * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.state_current .current_time {
   font-size: 24px;
   font-weight: bold;
 }
-.air_state .state_1 span {
+.state_current span {
+  font-size: 22px;
   padding: 0 10px;
 }
-.air_state .state_2 {
-  float: right;
-}
-.air_state .state_2 ul li {
-  list-style: none;
-  font-size: 18px;
+.state_current button {
   display: inline-block;
-  margin-right: 20px;
+  width: 23px;
+  height: 20px;
+  background-image: url(../img/Icon_process_reload.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-indent: -99999px;
+  vertical-align: middle;
 }
-.air_state .state_2 ul li:last-child {
-  margin-right: 0;
-}
-.air_state .state_3 {
+/* processState > state_type */
+.state_type {
   position: absolute;
   top: -60px;
   right: 0;
 }
-.air_state .state_3 button {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+.state_type button {
+  display: inline-block;
   font-size: 22px;
-  background-color: #ffffff;
 }
-.air_state .state_3 .st_domestic {
+.state_type button.on {
   font-weight: bold;
-  border-bottom: 5px solid #000;
+  border-bottom: solid 5px #000;
 }
-.air_state .state_3 .st_international {
+.state_type button + button {
   margin-left: 15px;
 }
-/* area_1 - airport_mosion */
-/* airport_mosion - mosion_top */
-.airport_mosion .mosion_top {
+/* processState > state_status */
+.state_status {
+  float: right;
+}
+.state_status ul li {
+  float: left;
+  margin-left: 30px;
+}
+.state_status ul li:nth-of-type(1) {
+  margin-left: 0;
+}
+.state_status ul li span {
+  display: block;
+  position: relative;
+  font-size: 18px;
+}
+.state_status ul li span:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -15px;
+}
+.state_status ul li .st_good:before {
+  background-color: #589ce4;
+}
+.state_status ul li .st_normal:before {
+  background-color: #62d144;
+}
+.state_status ul li .st_busy:before {
+  background-color: #f98f39;
+}
+.state_status ul li .verybusy:before {
+  background-color: #d93436;
+}
+/* airProcess_ct > airport_mosion */
+.airport_mosion {
+  width: 100%;
+  margin-top: 0;
+  overflow-x: auto;
+}
+/* airport_mosion > mosion_top */
+.mosion_top {
   width: 1180px;
   height: 390px;
-  background: url(../img/Content_1_bg.png);
+  background-image: url(../img/Img_mosion_bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+.walkLine {
+  width: calc(100% - 168px);
+  height: 95px;
+  position: absolute;
+  top: 211px;
+  left: 168px;
+  overflow: hidden;
+}
+.walkLine_ct {
+  width: 60px;
+  height: 95px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* opacity: 1; 임시설정 */
+  /* opacity: 0; */
+  opacity: 1;
+}
+/* 애니메이션 임시설정 */
+#content1:hover .walkLine_ct {
+  left: calc(100% - 168px);
+  transition: all 8s cubic-bezier(0, 0, 0.87, 1.08);
+}
+.human {
+  width: 60px;
+  height: 95px;
+  background: url(../img/Icon_walk_man.png) repeat-x;
+  position: relative;
 }
 .mosion_top ul {
-  padding: 340px 0 0;
   width: 100%;
-  height: 50px;
-  line-height: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 .mosion_top ul li {
-  list-style: none;
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
-  font-size: 16px;
-  color: #ffffff;
+  width: calc(100% / 7);
+  height: 50px;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
   float: left;
-  width: 169px;
 }
-.mosion_top ul li:last-child {
-  width: 160px;
+/* airport_mosion > mosion_bottom */
+.mosion_bottom {
+  width: 1180px;
+  height: 70px;
 }
-/* airport_mosion - bottom */
-/* area_1 - airport_mosion_txt */
-.airport_mosion_txt {
+.mosion_bottom .step_1 {
+  width: 340px;
+  height: 35px;
+  margin-left: 253px;
+}
+.mosion_bottom .step_2 {
+  width: 161px;
+  height: 35px;
+  margin-left: 5px;
+}
+.mosion_bottom .step_3 {
+  width: 161px;
+  height: 35px;
+  margin-left: 5px;
+}
+.mosion_bottom .step_4 {
+  width: 161px;
+  height: 35px;
+  margin-left: 5px;
+}
+.mosion_bottom .MSB {
+  border: dashed 1px #4c77ab;
+  border-top: 0;
+  float: left;
+  position: relative;
+}
+.mosion_bottom .MSB:before {
+  width: 10px;
+  height: 7px;
+  background-image: url(../img/Icon_mosion_bottom_arr.png);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5px;
+}
+.MSB .MSB_ct {
+  width: 140px;
+  height: 40px;
+  text-align: center;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.MSB .MSB_ct p {
+  height: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  color: #fff;
+  position: relative;
+}
+.MSB .MSB_ct p:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 70px;
+  height: 40px;
+  border-radius: 40px;
+  content: none;
+}
+.MSB .MSB_ct p em {
+  display: block;
+  text-indent: -9999px;
+}
+.MSB .MSB_ct p strong {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.MSB .MSB_ct p strong span {
+  color: #fff;
+  font-size: 20px;
+}
+.MSB .MSB_ct .MSB_good {
+  background-color: #589ce4;
+}
+.MSB .MSB_ct .MSB_normal {
+  background-color: #62d144;
+}
+.MSB .MSB_ct .MSB_busy {
+  background-color: #f98f39;
+}
+.MSB .MSB_ct .MSB_verybusy {
+  background-color: #d93436;
+}
+
+/* airProcess_ct > ul.airport_mosion_txt */
+.airProcess_ct .airport_mosion_txt {
   margin-top: 10px;
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
 }
-.airport_mosion_txt ul li {
-  list-style: none;
-  line-height: 1.6;
-  letter-spacing: -1.2px;
+.airport_mosion_txt li {
+  padding-left: 20px;
+  letter-spacing: -2.2px;
   text-align: left;
+  position: relative;
 }
-.airport_mosion_txt ul li span {
+.airport_mosion_txt li span {
   color: #a60436;
   font-weight: 700;
 }
