@@ -594,15 +594,18 @@ header {
   font-size: 25px;
   font-weight: normal;
   line-height: 1em;
-  letter-spacing: -0.5px;
+  /* letter-spacing: -0.5px; */
+  letter-spacing: -2.5px;
   margin-bottom: 20px;
 }
 .banner_txt p:nth-of-type(2) {
   color: #fff;
-  font-size: 82px;
+  /* font-size: 82px; */
+  font-size: 80px;
   font-weight: bold;
   line-height: 1em;
-  letter-spacing: -1px;
+  /* letter-spacing: -1px; */
+  letter-spacing: -5px;
   margin-bottom: 0px;
 }
 /* banner_ct > banner_menu */
@@ -618,8 +621,8 @@ header {
 .banner_menu a {
   display: inline-block;
   width: 168px;
-  /* margin: 0; */
   text-align: center;
+  vertical-align: top;
 }
 .banner_menu a span {
   display: block;
@@ -638,7 +641,8 @@ header {
   display: block;
   margin-top: 10px;
   color: #fff;
-  font-size: 22px;
+  /* font-size: 22px; */
+  font-size: 20px;
   font-weight: 500;
   line-height: 1em;
 }
@@ -653,38 +657,201 @@ header {
 }
 /* banner_air_search > air_search */
 .air_search {
+  display: inline-block;
   max-width: 1180px;
   width: 100%;
   height: auto;
-  padding: 0 20px;
-  display: inline-block;
 }
-/* air_search > air_search_button */
-.air_search_button {
+/* air_search > air_search_select */
+.air_search_select {
   width: 100%;
   font-size: 0;
   text-align: left;
 }
-.air_search_button button {
-  background: none;
+.air_search_select button {
   display: inline-block;
   height: 25px;
+  vertical-align: top;
 }
-.air_search_button button:nth-of-type(1) {
+.air_search_select button:nth-of-type(1) {
   margin-right: 30px;
 }
-.air_search_button button span {
+.air_search_select button span {
   display: block;
   padding-top: 3px;
   color: #fff;
   font-size: 20px;
   font-weight: 300;
   line-height: 1em;
+  letter-spacing: -2px;
 }
-.air_search_button button:nth-of-type(1) span {
+.air_search_select button.on span {
   padding-top: 0px;
   font-size: 25px;
   font-weight: bold;
+}
+/* air_search > air_search_box */
+.air_search_box {
+  width: 100%;
+  height: 100px;
+  margin-top: 15px;
+  padding-right: 100px;
+  background-color: #fff;
+  font-size: 0;
+  text-align: left;
+  position: relative;
+}
+.air_search_box > a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 1em;
+  position: absolute;
+  top: -40px;
+  right: 0;
+  padding-right: 15px;
+  background-image: url(../img/Icon_air_search_arr.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.air_search_box > button {
+  width: 100px;
+  height: 100px;
+  background-color: #a60436;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 100px;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.air_search_box .ASB {
+  display: inline-block;
+  height: 100px;
+  padding: 22px 30px 0 30px;
+  font-size: 0;
+  vertical-align: top;
+  position: relative;
+}
+.air_search_box .ASB:before {
+  display: block;
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #dddddd;
+}
+.air_search_box .ASB label {
+  display: block;
+  width: 100%;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666666;
+}
+.air_search_box .ASB_btt {
+  width: 100%;
+  height: 26px;
+  text-align: left;
+  background-image: url(../img/Icon_air_search_box_arr.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.air_search_box .ASB_btt span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1em;
+}
+.air_search_box .ASB_opt {
+  width: 100%;
+  height: auto;
+  /* display: none; */
+  /* display: block; 임시설정 */
+  display: block;
+}
+.air_search_box .ASB_opt.on {
+  display: block;
+}
+.air_search_box .ASB_opt_list {
+  width: calc(100% - 1px);
+  padding: 10px 30px 15px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  box-shadow: 0 5px 30px -15px #666;
+  z-index: 2;
+}
+.air_search_box .ASB_opt_list_ct {
+  margin-top: 15px;
+}
+.air_search_box .ASB_opt_list_ct > li {
+  display: block;
+  margin-bottom: 12px;
+  padding-right: 25px;
+  font-size: 0;
+}
+.air_search_box .ASB_opt_list_ct > li.on {
+  background: url(../img/Icon_air_search_box_check.png) no-repeat right top 5px;
+}
+.air_search_box .ASB_opt_list_ct > li > button {
+  display: inline-block;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+.air_search_box .ASB_opt_list_ct > li.on > button {
+  color: #00589e;
+}
+.airLocation {
+  width: 18.5%;
+}
+.airTime {
+  width: 27%;
+}
+.airTime_time {
+  display: inline-block;
+  width: calc(50% - 20px);
+  font-size: 0;
+  vertical-align: top;
+}
+.airTime_time .ATS {
+  display: inline-block;
+  width: 50%;
+  height: 26px;
+  padding: 0 10px 0 0;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1em;
+  vertical-align: middle;
+  background-image: url(../img/Icon_air_search_time_arr.png);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+.airSection {
+  width: 14.5%;
+}
+.airLine {
+  width: 21.5%;
+}
+.airCarrier {
+  width: 18.5%;
+}
+.airCarrier input {
+  width: 100%;
+  height: 26px;
+  padding: 0;
+  color: #000;
+  font-size: 20px;
+  line-height: 1em;
+  vertical-align: top;
 }
 /* ======================================== 컨텐츠 시작 */
 #contents {
