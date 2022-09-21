@@ -1,12 +1,3 @@
-.bg999 {
-  background-color: rgb(106, 255, 255);
-}
-.container {
-  max-width: 1180px;
-  height: inherit;
-  background-color: rgba(0, 0, 0, 0.1);
-  margin: auto;
-}
 /* ============================== wrap */
 #wrap {
 }
@@ -18,8 +9,41 @@
   position: absolute;
   top: 0;
   left: 0;
-  /* 팝업닫기 누르면 발동 ! */
-  /* top: -110px; */
+  z-index: 100;
+  transition: top 0.2s;
+  -webkit-transition: top 0.2s;
+}
+#pop_up.on {
+  top: -110px;
+}
+/* pop_up > button */
+.pop_stop_btt {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/Icon_pop_slide_stop.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #1c293c;
+  text-indent: -99999px;
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 80px;
+  z-index: 120;
+}
+.pop_close_btt {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/Icon_pop_slide_close.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #1c293c;
+  text-indent: -99999px;
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 34px;
+  z-index: 120;
 }
 /* pop_up > pop_up_ct */
 .pop_up_ct {
@@ -27,36 +51,113 @@
   width: 100%;
   height: 100%;
   margin: 0 auto;
+  font-size: 0;
   position: relative;
+}
+.pop_up_ct:before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  left: -30px;
+  top: 0;
+  background-color: #1c293c;
+  z-index: 110;
+}
+.pop_up_ct:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  right: -30px;
+  top: 0;
+  background-color: #1c293c;
+  z-index: 110;
+}
+/* pop_up_ct > button */
+.pop_prev_btt {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/Icon_pop_slide_left.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #1c293c;
+  text-indent: -99999px;
+  position: absolute;
+  top: calc(50% - 17.5px);
+  left: -35px;
+  z-index: 120;
+}
+.pop_next_btt {
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-image: url(../img/Icon_pop_slide_right.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #1c293c;
+  text-indent: -99999px;
+  position: absolute;
+  top: calc(50% - 17.5px);
+  right: -35px;
+  z-index: 120;
 }
 /* pop_up_ct > pop_up_slide */
 .pop_up_slide {
-  position: relative;
   display: block;
+  position: relative;
   overflow: hidden;
-  /* margin: 0; */
-  /* padding: 0; */
 }
 /* pop_up_slide > slide_pop_ct */
 .slide_pop_ct {
-  position: relative;
   display: block;
+  /* width 임시 설정 */
+  width: 10620px;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
   top: 0;
   left: 0;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
+  opacity: 1;
 }
 /* slide_pop_ct > slide_pop */
 .slide_pop {
-  width: 50%;
+  width: 590px;
+  height: 100%;
   padding: 0 30px;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  display: table;
+  table-layout: fixed;
+  vertical-align: top;
   float: left;
+  /* border-right 임시설정 */
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.slide_pop a {
+  display: table-cell;
+  width: 100%;
+  height: 110px;
+  padding-left: 105px;
+  position: relative;
+  vertical-align: middle;
+  font-size: 0;
+}
+.slide_pop a img {
+  display: inline-block;
+  width: 76px;
+  height: 76px;
+  position: absolute;
+  top: 17px;
+  left: 0;
+  vertical-align: middle;
+  font-size: 0;
 }
 .slide_pop a b {
   display: inline-block;
   color: #fecf57;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
   line-height: 30px;
   letter-spacing: -1px;
@@ -68,213 +169,18 @@
   height: 38px;
   border: 1px solid #fff;
   border-radius: 18px;
+  color: #fff;
   font-size: 15px;
   line-height: 36px;
-  color: #fff;
   text-align: center;
   position: absolute;
+  top: 37px;
   right: 0;
+  vertical-align: middle;
 }
 .slide_pop a span:hover {
   background-color: #fff;
   color: #1c293c;
-}
-/* pop_1 */
-.pop_1 a {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 110px;
-  padding-left: 100px;
-  position: relative;
-}
-.pop_1 img {
-  display: inline-block;
-  width: 76px;
-  height: 76px;
-  position: absolute;
-  left: 0;
-}
-/* pop_2 */
-.pop_2 a {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 110px;
-  padding-left: 100px;
-  position: relative;
-}
-.pop_2 img {
-  display: inline-block;
-  width: 76px;
-  height: 76px;
-  position: absolute;
-  left: 0;
-}
-/* pop_3 */
-.pop_3 a {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 110px;
-  padding-left: 100px;
-  position: relative;
-}
-.pop_3 img {
-  display: inline-block;
-  width: 76px;
-  height: 76px;
-  position: absolute;
-  left: 0;
-}
-/* pop_4 */
-.pop_4 a {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 110px;
-  padding-left: 100px;
-  position: relative;
-}
-.pop_4 img {
-  display: inline-block;
-  width: 76px;
-  height: 76px;
-  position: absolute;
-  left: 0;
-}
-/* pop_5 */
-.pop_5 a {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 110px;
-  padding-left: 100px;
-  position: relative;
-}
-.pop_5 img {
-  display: inline-block;
-  width: 76px;
-  height: 76px;
-  position: absolute;
-  left: 0;
-}
-/* pop_6 */
-.pop_6 a {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 110px;
-  padding-left: 100px;
-  position: relative;
-}
-.pop_6 img {
-  display: inline-block;
-  width: 76px;
-  height: 76px;
-  position: absolute;
-  left: 0;
-}
-/* pop_7 */
-.pop_7 a {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 110px;
-  padding-left: 100px;
-  position: relative;
-}
-.pop_7 img {
-  display: inline-block;
-  width: 76px;
-  height: 76px;
-  position: absolute;
-  left: 0;
-}
-/* pop_8 */
-.pop_8 a {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 110px;
-  padding-left: 100px;
-  position: relative;
-}
-.pop_8 img {
-  display: inline-block;
-  width: 76px;
-  height: 76px;
-  position: absolute;
-  left: 0;
-}
-/* pop_9 */
-.pop_9 a {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 110px;
-  padding-left: 100px;
-  position: relative;
-}
-.pop_9 img {
-  display: inline-block;
-  width: 76px;
-  height: 76px;
-  position: absolute;
-  left: 0;
-}
-/* pop_up_ct > button */
-.pop_prev_btt {
-  display: block;
-  width: 35px;
-  height: 35px;
-  background-image: url(../img/Icon_pop_slide_left.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #1c293c;
-  text-indent: -999999px;
-  position: absolute;
-  top: calc(50% - 17.5px);
-  left: -35px;
-}
-.pop_next_btt {
-  display: block;
-  width: 35px;
-  height: 35px;
-  background-image: url(../img/Icon_pop_slide_right.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #1c293c;
-  text-indent: -999999px;
-  position: absolute;
-  top: calc(50% - 17.5px);
-  right: -35px;
-}
-.pop_stop_btt {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url(../img/Icon_pop_slide_stop.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #1c293c;
-  text-indent: -999999px;
-  position: absolute;
-  top: calc(50% - 12px);
-  right: 80px;
-}
-.pop_close_btt {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url(../img/Icon_pop_slide_close.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-color: #1c293c;
-  text-indent: -999999px;
-  position: absolute;
-  top: calc(50% - 12px);
-  right: 34px;
 }
 /* ============================== header */
 header {
@@ -594,18 +500,15 @@ header {
   font-size: 25px;
   font-weight: normal;
   line-height: 1em;
-  /* letter-spacing: -0.5px; */
-  letter-spacing: -2.5px;
+  letter-spacing: -0.5px;
   margin-bottom: 20px;
 }
 .banner_txt p:nth-of-type(2) {
   color: #fff;
-  /* font-size: 82px; */
-  font-size: 80px;
+  font-size: 82px;
   font-weight: bold;
   line-height: 1em;
-  /* letter-spacing: -1px; */
-  letter-spacing: -5px;
+  letter-spacing: -1px;
   margin-bottom: 0px;
 }
 /* banner_ct > banner_menu */
@@ -683,7 +586,6 @@ header {
   font-size: 20px;
   font-weight: 300;
   line-height: 1em;
-  letter-spacing: -2px;
 }
 .air_search_select button.on span {
   padding-top: 0px;
@@ -1226,8 +1128,7 @@ header {
   margin-top: 10px;
 }
 .airport_mosion_txt li {
-  padding-left: 20px;
-  letter-spacing: -2.2px;
+  letter-spacing: -1.2px;
   text-align: left;
   position: relative;
 }
@@ -1325,8 +1226,7 @@ header {
 /* ============================== content3 */
 #content3 {
   width: 100%;
-  height: auto;
-  padding: 100px 0;
+  height: 937px;
   background-image: url(../img/Main_Visual2.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -1336,9 +1236,15 @@ header {
 .area_3 {
   max-width: 1180px;
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0 auto;
-  padding: 55px 120px 50px;
+  padding-bottom: 100px;
+}
+/* area_3 > reserve */
+.reserve {
+  max-width: 1180px;
+  width: 100%;
+  padding: 55px 120px 50px 120px;
   background-color: #f5f5f5;
 }
 /* area_3 > reserve_txt */
@@ -1392,8 +1298,7 @@ header {
   float: left;
 }
 .reserve_line .re_button button {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 22px;
   font-weight: 500;
   text-align: center;
@@ -1406,8 +1311,7 @@ header {
 }
 /* reserve_line - re_check */
 .reserve_line .re_check {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: -1px;
@@ -1427,8 +1331,7 @@ header {
 }
 /* fieldset - reserve_ct */
 .reserve_ct {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #000;
@@ -1450,8 +1353,7 @@ header {
   margin: 25px 0 15px;
 }
 .re_block1 .start select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   background-color: #fff;
@@ -1461,8 +1363,7 @@ header {
   padding: 0 35px 0 13px;
 }
 .re_block1 .start select option {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   color: #000;
   background-color: #fff;
@@ -1478,8 +1379,7 @@ header {
   margin: 25px 0 15px;
 }
 .re_block1 .arrive select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   background-color: #fff;
@@ -1489,8 +1389,7 @@ header {
   padding: 0 35px 0 13px;
 }
 .re_block1 .arrive select option {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   color: #000;
   background-color: #fff;
@@ -1511,8 +1410,7 @@ header {
   margin: 25px 0 15px;
 }
 .re_block2 .come_in_day input:nth-of-type(1) {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   color: #000;
@@ -1530,8 +1428,7 @@ header {
   float: left;
 }
 .re_block2 .come_in_day input:nth-of-type(2) {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   color: #000;
@@ -1553,8 +1450,7 @@ header {
   margin: 25px 0 15px;
 }
 .guests select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   background-color: #fff;
@@ -1565,8 +1461,7 @@ header {
   font-weight: bold;
 }
 .guests select option {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   color: #000;
   background-color: #fff;
@@ -1583,8 +1478,7 @@ header {
   margin: 25px 0 15px;
 }
 .seats select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   background-color: #fff;
@@ -1595,8 +1489,7 @@ header {
   font-weight: bold;
 }
 .seats select option {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   color: #000;
   background-color: #fff;
@@ -1608,8 +1501,7 @@ fieldset .reserve_bt {
   width: 230px;
 }
 .reserve_bt input {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 17px;
   font-weight: bold;
   color: #fff;
@@ -1639,8 +1531,7 @@ fieldset .reserve_bt {
 }
 /* area_4 - parking_state */
 .area_4 .parking_state {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   color: #000;
   width: calc(50% - 20px);
   height: 644px;
@@ -1708,8 +1599,7 @@ fieldset .reserve_bt {
   text-indent: -9999px;
 }
 .parking1 .pk_st {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: right;
@@ -1756,8 +1646,7 @@ fieldset .reserve_bt {
   text-indent: -9999px;
 }
 .parking2 .pk_st {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: right;
@@ -1804,8 +1693,7 @@ fieldset .reserve_bt {
   text-indent: -9999px;
 }
 .parking3 .pk_st {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: right;
@@ -1852,8 +1740,7 @@ fieldset .reserve_bt {
   text-indent: -9999px;
 }
 .parking4 .pk_st {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: right;
@@ -1900,8 +1787,7 @@ fieldset .reserve_bt {
   text-indent: -9999px;
 }
 .parking5 .pk_st {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: right;
@@ -1940,8 +1826,7 @@ fieldset .reserve_bt {
 /* parking_reserve - parking_re_ct */
 .parking_re_ct {
   width: 100%;
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
 }
 /* parking_re_ct - pk_in_day */
 .parking_re_ct .pk_in_day {
@@ -1961,8 +1846,7 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_in_day input {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -1976,8 +1860,7 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_in_day input + select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -1991,8 +1874,7 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_in_day input + select + select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -2023,8 +1905,7 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_out_day input {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -2038,8 +1919,7 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_out_day input + select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -2053,8 +1933,7 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_out_day input + select + select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -2098,8 +1977,7 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_select select option {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   color: #000;
   background-color: #fff;
@@ -2112,8 +1990,7 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_reserve input {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   width: 100%;
@@ -2199,14 +2076,12 @@ fieldset .reserve_bt {
   height: auto;
   margin: 0 auto;
   padding: 175px 0 100px;
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   color: #000;
 }
 /* area_5 - traffic_txt */
 .traffic_txt {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   color: #000;
   text-align: center;
 }
@@ -2386,14 +2261,12 @@ fieldset .reserve_bt {
   height: auto;
   margin: 0 auto;
   padding: 165px 0 100px;
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   color: #000;
 }
 /* area_6 - service_txt */
 .service_txt {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   color: #000;
   text-align: center;
 }
@@ -2580,8 +2453,7 @@ fieldset .reserve_bt {
   height: auto;
   margin: 0 auto;
   padding: 49px 0 46px 0;
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
-    Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
   color: #fff;
   position: relative;
 }
