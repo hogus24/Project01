@@ -4,15 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
     <!-- Meta -->
-    <meta name="robots" content="index,follow" />
-    <meta name="description" content="친절한 공항, 다시찾고싶은 공항, 김포국제공항" />
-    <meta name="keywords" content="김포,국제,공항,김포국제,국제공항,김포공항,김포국제공항" />
     <meta name="author" content="장소연" />
-    <meta property="og:image" content="img/og-800x400.png" />
+    <meta name="keywords" content="김포,국제,공항,김포국제,국제공항,김포공항,김포국제공항" />
+    <meta name="description" content="친절한 공항, 다시찾고싶은 공항, 김포국제공항" />
+    <!-- Meta - og -->
     <meta property="og:title" content="김포국제공항" />
+    <meta property="og:image" content="img/og-800x400.png" />
     <meta property="og:site_name" content="김포국제공항" />
     <meta property="og:description" content="친절한 공항, 다시찾고싶은 공항, 김포국제공항" />
+    <!-- Meta - tw -->
+    <meta name="twitter:title" content="김포국제공항" />
     <meta name="twitter:image" content="img/og-120x120.png" />
     <meta name="twitter:description" content="친절한 공항, 다시찾고싶은 공항, 김포국제공항" />
     <title>김포국제공항</title>
@@ -21,13 +24,21 @@
     <!-- Css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Js (CDN 방식 X, 다운로드 방식 O)-->
-    <!-- jQuery Core 1.12.4 minified 을 사용할 것 (IE 호환성 문제) -->
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/style.js"></script>
     <!-- 해야할 일 : 올리기 전에 주석 전부 지우기 ~~ -->
   </head>
   <body>
+    <ul class="skip_menu">
+      <li>
+        <a href="#header">주메뉴 바로가기</a>
+      </li>
+      <li>
+        <a href="#container">본문 바로가기</a>
+      </li>
+      <li>
+        <a href="#footer">푸터 바로가기</a>
+      </li>
+    </ul>
+    <!-- // .skip_menu -->
     <div id="wrap">
       <div id="pop_up">
         <div class="pop_up_ct">
@@ -253,23 +264,23 @@
                   </li>
                   <li>
                     <a href="#">공항시설</a>
-                    <dl>
-                      <dd><a href="#">SGBAC</a></dd>
-                      <dd><a href="#">공항 전망대</a></dd>
-                      <dd><a href="#">유료 대합실</a></dd>
-                      <dd><a href="#">스카이시티</a></dd>
-                      <dd><a href="#">장애인시설</a></dd>
-                    </dl>
+                    <ul>
+                      <li><a href="#">SGBAC</a></li>
+                      <li><a href="#">공항 전망대</a></li>
+                      <li><a href="#">유료 대합실</a></li>
+                      <li><a href="#">스카이시티</a></li>
+                      <li><a href="#">장애인시설</a></li>
+                    </ul>
                   </li>
                   <li>
                     <a href="#">공항이용 가이드</a>
-                    <dl>
-                      <dd><a href="#">임산부 및 유아, 어린이 동반</a></dd>
-                      <dd><a href="#">장애인, 고령자 동반</a></dd>
-                      <dd><a href="#">반려동물 동반</a></dd>
-                      <dd><a href="#">교통약자 이동서비스</a></dd>
-                      <dd><a href="#">교통약자 우선수속</a></dd>
-                    </dl>
+                    <ul>
+                      <li><a href="#">임산부 및 유아, 어린이 동반</a></li>
+                      <li><a href="#">장애인, 고령자 동반</a></li>
+                      <li><a href="#">반려동물 동반</a></li>
+                      <li><a href="#">교통약자 이동서비스</a></li>
+                      <li><a href="#">교통약자 우선수속</a></li>
+                    </ul>
                   </li>
                   <li>
                     <a href="#">공항시설 전화번호</a>
@@ -284,17 +295,17 @@
                   </li>
                   <li>
                     <a href="#">알짜여행팁</a>
-                    <dl>
-                      <dd><a href="#">항공권 소지자 혜택</a></dd>
-                      <dd><a href="#">공항이용 알짜팁</a></dd>
-                    </dl>
+                    <ul>
+                      <li><a href="#">항공권 소지자 혜택</a></li>
+                      <li><a href="#">공항이용 알짜팁</a></li>
+                    </ul>
                   </li>
                   <li>
                     <a href="#">코로나 19 관련 안내</a>
-                    <dl>
-                      <dd><a href="#">입출국현황</a></dd>
-                      <dd><a href="#">코로나19 관련 FAQ</a></dd>
-                    </dl>
+                    <ul>
+                      <li><a href="#">입출국현황</a></li>
+                      <li><a href="#">코로나19 관련 FAQ</a></li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -306,47 +317,47 @@
                   </li>
                   <li>
                     <a href="#">보호구역출입증</a>
-                    <dl>
-                      <dd>보호구역출입증 안내</dd>
-                      <dd>공항별 공지사항</dd>
-                    </dl>
+                    <ul>
+                      <li>보호구역출입증 안내</li>
+                      <li>공항별 공지사항</li>
+                    </ul>
                   </li>
                   <li>
                     <a href="#">공항 시설사용</a>
-                    <dl>
-                      <dd><a href="#">공항시설사용료</a></dd>
-                      <dd><a href="#">항공사 사용계약</a></dd>
-                      <dd><a href="#">임대시설 사용안내</a></dd>
-                      <dd><a href="#">이동지역</a></dd>
-                    </dl>
+                    <ul>
+                      <li><a href="#">공항시설사용료</a></li>
+                      <li><a href="#">항공사 사용계약</a></li>
+                      <li><a href="#">임대시설 사용안내</a></li>
+                      <li><a href="#">이동지역</a></li>
+                    </ul>
                   </li>
                   <li>
                     <a href="#">안전관리시스템</a>
-                    <dl>
-                      <dd><a href="#">개요</a></dd>
-                      <dd><a href="#">안전정책</a></dd>
-                      <dd><a href="#">안전성과지표 관리대상</a></dd>
-                      <dd><a href="#">안전회보</a></dd>
-                      <dd><a href="#">자발적 비밀보고</a></dd>
-                      <dd><a href="#">관련사이트</a></dd>
-                    </dl>
+                    <ul>
+                      <li><a href="#">개요</a></li>
+                      <li><a href="#">안전정책</a></li>
+                      <li><a href="#">안전성과지표 관리대상</a></li>
+                      <li><a href="#">안전회보</a></li>
+                      <li><a href="#">자발적 비밀보고</a></li>
+                      <li><a href="#">관련사이트</a></li>
+                    </ul>
                   </li>
                   <li>
                     <a href="#">산업안전보건</a>
-                    <dl>
-                      <dd><a href="#">개요</a></dd>
-                      <dd><a href="#">안전보건방침</a></dd>
-                      <dd><a href="#">안전보건경영시스템</a></dd>
-                      <dd><a href="#">안전관련 법령</a></dd>
-                      <dd><a href="#">관련사이트</a></dd>
-                    </dl>
+                    <ul>
+                      <li><a href="#">개요</a></li>
+                      <li><a href="#">안전보건방침</a></li>
+                      <li><a href="#">안전보건경영시스템</a></li>
+                      <li><a href="#">안전관련 법령</a></li>
+                      <li><a href="#">관련사이트</a></li>
+                    </ul>
                   </li>
                   <li>
                     <a href="#">특허이전</a>
-                    <dl>
-                      <dd><a href="#">특허 허여</a></dd>
-                      <dd><a href="#">KAC 특허보유현황</a></dd>
-                    </dl>
+                    <ul>
+                      <li><a href="#">특허 허여</a></li>
+                      <li><a href="#">KAC 특허보유현황</a></li>
+                    </ul>
                   </li>
                   <li>
                     <a href="#">공항소방 구조대</a>
@@ -376,12 +387,12 @@
                   </li>
                   <li>
                     <a href="#">고객의 소리</a>
-                    <dl>
-                      <dd><a href="#">고객의 소리</a></dd>
-                      <dd><a href="#">Airport Community</a></dd>
-                      <dd><a href="#">공개목록</a></dd>
-                      <dd><a href="#">KAC 안전신문고</a></dd>
-                    </dl>
+                    <ul>
+                      <li><a href="#">고객의 소리</a></li>
+                      <li><a href="#">Airport Community</a></li>
+                      <li><a href="#">공개목록</a></li>
+                      <li><a href="#">KAC 안전신문고</a></li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -420,940 +431,943 @@
         <!-- // .header-nav -->
       </header>
       <!-- // #header -->
-      <div id="banner">
-        <div class="banner_ct">
-          <div class="banner_slide_button">
-            <ul>
-              <li>
-                <button>첫번째 슬라이드</button>
-              </li>
-              <li>
-                <button>두번째 슬라이드</button>
-              </li>
-              <li>
-                <button>세번째 슬라이드</button>
-              </li>
-              <li>
-                <button>정지</button>
-              </li>
-            </ul>
-          </div>
-          <!-- // .banner_slide_button -->
-          <div class="banner_txt">
-            <p>친절한 공항, 다시찾고싶은 공항</p>
-            <p>김포국제공항</p>
-          </div>
-          <!-- // .banner_txt -->
-          <div class="banner_menu">
-            <a href="#" title="북마크 이동">
-              <span>
-                <img src="img/Icon_banner_menu1.png" alt="탑승수속 소요시간" />
-              </span>
-              <b>탑승수속 소요시간</b>
-            </a>
-            <a href="#" title="북마크 이동">
-              <span>
-                <img src="img/Icon_banner_menu2.png" alt="공항가이드" />
-              </span>
-              <b>공항가이드</b>
-            </a>
-            <a href="#" title="북마크 이동">
-              <span>
-                <img src="img/Icon_banner_menu3.png" alt="항공권예약" />
-              </span>
-              <b>항공권예약</b>
-            </a>
-            <a href="#" title="북마크 이동">
-              <span>
-                <img src="img/Icon_banner_menu4.png" alt="교통안내" />
-              </span>
-              <b>교통안내</b>
-            </a>
-            <a href="#" title="북마크 이동">
-              <span>
-                <img src="img/Icon_banner_menu5.png" alt="시설안내" />
-              </span>
-              <b>시설안내</b>
-            </a>
-          </div>
-          <!-- // .banner_menu -->
-          <div class="banner_air_search">
-            <div class="air_search">
-              <div class="air_search_select">
-                <button class="on">
-                  <span>출발</span>
-                </button>
-                <button>
-                  <span>도착</span>
-                </button>
-              </div>
-              <!-- // .air_search_select -->
-              <div class="air_search_box">
-                <a href="#">출발/도착 안내</a>
-                <div class="ASB airLocation">
-                  <label>공항</label>
-                  <button class="ASB_btt" type="button" title="선택옵션 확장됨">
-                    <span>서울/김포</span>
-                  </button>
-                  <div class="ASB_opt">
-                    <div class="ASB_opt_list">
-                      <ul class="ASB_opt_list_ct">
-                        <li class="on">
-                          <button type="button">서울/김포</button>
-                        </li>
-                        <li>
-                          <button type="button">부산/김해</button>
-                        </li>
-                        <li>
-                          <button type="button">제주</button>
-                        </li>
-                        <li>
-                          <button type="button">대구</button>
-                        </li>
-                        <li>
-                          <button type="button">울산</button>
-                        </li>
-                        <li>
-                          <button type="button">청주</button>
-                        </li>
-                        <li>
-                          <button type="button">무안</button>
-                        </li>
-                        <li>
-                          <button type="button">광주</button>
-                        </li>
-                        <li>
-                          <button type="button">여수</button>
-                        </li>
-                        <li>
-                          <button type="button">포항경주</button>
-                        </li>
-                        <li>
-                          <button type="button">양양</button>
-                        </li>
-                        <li>
-                          <button type="button">사천</button>
-                        </li>
-                        <li>
-                          <button type="button">군산</button>
-                        </li>
-                        <li>
-                          <button type="button">횡성/원주</button>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- // .ASB_opt_list -->
-                  </div>
-                  <!-- // .ASB_opt -->
-                </div>
-                <!-- // .airLocation -->
-                <div class="ASB airTime">
-                  <label>시간</label>
-                  <div class="airTime_time">
-                    <select name="setHour" class="ATS" id="setTime" title="시작시간-시">
-                      <option value="00" selected="selected">00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
-                      <option value="05">05</option>
-                      <option value="06">06</option>
-                      <option value="07">07</option>
-                      <option value="08">08</option>
-                      <option value="09">09</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-                      <option value="21">21</option>
-                      <option value="22">22</option>
-                      <option value="23">23</option>
-                    </select>
-                    <select name="setMin" class="ATS" id="setTime" title="시작시간-분">
-                      <option value="00" selected="selected">00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
-                      <option value="05">05</option>
-                      <option value="06">06</option>
-                      <option value="07">07</option>
-                      <option value="08">08</option>
-                      <option value="09">09</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-                      <option value="21">21</option>
-                      <option value="22">22</option>
-                      <option value="23">23</option>
-                      <option value="24">24</option>
-                      <option value="25">25</option>
-                      <option value="26">26</option>
-                      <option value="27">27</option>
-                      <option value="28">28</option>
-                      <option value="29">29</option>
-                      <option value="30">30</option>
-                      <option value="31">31</option>
-                      <option value="32">32</option>
-                      <option value="33">33</option>
-                      <option value="34">34</option>
-                      <option value="35">35</option>
-                      <option value="36">36</option>
-                      <option value="37">37</option>
-                      <option value="38">38</option>
-                      <option value="39">39</option>
-                      <option value="40">40</option>
-                      <option value="41">41</option>
-                      <option value="42">42</option>
-                      <option value="43">43</option>
-                      <option value="44">44</option>
-                      <option value="45">45</option>
-                      <option value="46">46</option>
-                      <option value="47">47</option>
-                      <option value="48">48</option>
-                      <option value="49">49</option>
-                      <option value="50">50</option>
-                      <option value="51">51</option>
-                      <option value="52">52</option>
-                      <option value="53">53</option>
-                      <option value="54">54</option>
-                      <option value="55">55</option>
-                      <option value="56">56</option>
-                      <option value="57">57</option>
-                      <option value="58">58</option>
-                      <option value="59">59</option>
-                    </select>
-                  </div>
-                  <!-- // .airTime_time -->
-                  <span>~</span>
-                  <div class="airTime_time">
-                    <select name="endHour" class="ATS" id="setTime" title="시작시간-시">
-                      <option value="00" selected="selected">00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
-                      <option value="05">05</option>
-                      <option value="06">06</option>
-                      <option value="07">07</option>
-                      <option value="08">08</option>
-                      <option value="09">09</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-                      <option value="21">21</option>
-                      <option value="22">22</option>
-                      <option value="23">23</option>
-                    </select>
-                    <select name="endMin" class="ATS" id="setTime" title="시작시간-분">
-                      <option value="00" selected="selected">00</option>
-                      <option value="01">01</option>
-                      <option value="02">02</option>
-                      <option value="03">03</option>
-                      <option value="04">04</option>
-                      <option value="05">05</option>
-                      <option value="06">06</option>
-                      <option value="07">07</option>
-                      <option value="08">08</option>
-                      <option value="09">09</option>
-                      <option value="10">10</option>
-                      <option value="11">11</option>
-                      <option value="12">12</option>
-                      <option value="13">13</option>
-                      <option value="14">14</option>
-                      <option value="15">15</option>
-                      <option value="16">16</option>
-                      <option value="17">17</option>
-                      <option value="18">18</option>
-                      <option value="19">19</option>
-                      <option value="20">20</option>
-                      <option value="21">21</option>
-                      <option value="22">22</option>
-                      <option value="23">23</option>
-                      <option value="24">24</option>
-                      <option value="25">25</option>
-                      <option value="26">26</option>
-                      <option value="27">27</option>
-                      <option value="28">28</option>
-                      <option value="29">29</option>
-                      <option value="30">30</option>
-                      <option value="31">31</option>
-                      <option value="32">32</option>
-                      <option value="33">33</option>
-                      <option value="34">34</option>
-                      <option value="35">35</option>
-                      <option value="36">36</option>
-                      <option value="37">37</option>
-                      <option value="38">38</option>
-                      <option value="39">39</option>
-                      <option value="40">40</option>
-                      <option value="41">41</option>
-                      <option value="42">42</option>
-                      <option value="43">43</option>
-                      <option value="44">44</option>
-                      <option value="45">45</option>
-                      <option value="46">46</option>
-                      <option value="47">47</option>
-                      <option value="48">48</option>
-                      <option value="49">49</option>
-                      <option value="50">50</option>
-                      <option value="51">51</option>
-                      <option value="52">52</option>
-                      <option value="53">53</option>
-                      <option value="54">54</option>
-                      <option value="55">55</option>
-                      <option value="56">56</option>
-                      <option value="57">57</option>
-                      <option value="58">58</option>
-                      <option value="59">59</option>
-                    </select>
-                  </div>
-                  <!-- // .airTime_time -->
-                </div>
-                <!-- // .airTime -->
-                <div class="ASB airSection">
-                  <label>구분</label>
-                  <button class="ASB_btt" type="button" title="선택옵션 확장됨">
-                    <span>전체</span>
-                  </button>
-                  <div class="ASB_opt">
-                    <div class="ASB_opt_list">
-                      <ul class="ASB_opt_list_ct">
-                        <li class="on">
-                          <button type="button">전체</button>
-                        </li>
-                        <li>
-                          <button type="button">국내선</button>
-                        </li>
-                        <li>
-                          <button type="button">국제선</button>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- // .ASB_opt_list -->
-                  </div>
-                  <!-- // .ASB_opt -->
-                </div>
-                <!-- // .airSection -->
-                <div class="ASB airLine">
-                  <label>항공사</label>
-                  <button class="ASB_btt" type="button" title="선택옵션 확장됨">
-                    <span>선택</span>
-                  </button>
-                  <div class="ASB_opt">
-                    <div class="ASB_opt_list">
-                      <ul class="ASB_opt_list_ct">
-                        <li class="on">
-                          <button type="button">선택</button>
-                        </li>
-                        <li>
-                          <button type="button">대한항공</button>
-                        </li>
-                        <li>
-                          <button type="button">아시아나</button>
-                        </li>
-                        <li>
-                          <button type="button">에어부산</button>
-                        </li>
-                        <li>
-                          <button type="button">에어서울</button>
-                        </li>
-                        <li>
-                          <button type="button">제주항공</button>
-                        </li>
-                        <li>
-                          <button type="button">진에어</button>
-                        </li>
-                        <li>
-                          <button type="button">티웨이</button>
-                        </li>
-                        <li>
-                          <button type="button">하이에어</button>
-                        </li>
-                        <li>
-                          <button type="button">플라이강원</button>
-                        </li>
-                        <li>
-                          <button type="button">에어로케이항공</button>
-                        </li>
-                        <li>
-                          <button type="button">에어프레미아</button>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- // .ASB_opt_list -->
-                  </div>
-                  <!-- // .ASB_opt -->
-                </div>
-                <!-- // .airLine -->
-                <div class="ASB airCarrier">
-                  <label>편명</label>
-                  <input type="text" name="airCarrier" id="" placeholder="편명 입력" title="편명 입력" />
-                </div>
-                <!-- // .airCarrier -->
-                <button type="button" title="조회버튼">조회</button>
-                <div class="weather">
-                  <img src="img/Icon_weather_sun.svg" alt="sun" />
-                  <p>27</p>
-                </div>
-                <!-- // .weather -->
-              </div>
-              <!-- // .air_search_box -->
-            </div>
-            <!-- // .air_search -->
-          </div>
-          <!-- // .banner_air_search -->
-        </div>
-      </div>
-      <!-- // #banner -->
-      <div id="contents">
-        <div id="content1">
-          <div class="area_1">
-            <div class="airProcess_txt">
-              <p>BOARDING PROCESS TIME</p>
-              <p>공항 탑승수속 소요시간 안내</p>
-              <p>항공권 발권부터 항공기 출발까지 실시간 평균 소요시간 안내</p>
-            </div>
-            <!-- // .airProcess_txt -->
-            <div class="airProcess_ct">
-              <div class="airProcess_time">
-                <div class="processTime">
-                  <strong class="totalTime">00<span>분</span></strong>
-                </div>
-                <!-- // .processTime -->
-                <div class="processState cf">
-                  <div class="state_current">
-                    <strong class="current_time">PM 00:00</strong>
-                    <span>기준</span>
-                    <button type="button">리로드</button>
-                  </div>
-                  <!-- // .state_current -->
-                  <div class="state_type">
-                    <button type="button" class="st_domestic on">국내선</button>
-                    <button type="button" class="st_international" onclick="alert('아직 준비중입니다.')">국제선</button>
-                  </div>
-                  <!-- // .state_type -->
-                  <div class="state_status">
-                    <ul class="cf">
-                      <li>
-                        <span class="st_good">원활</span>
-                      </li>
-                      <li>
-                        <span class="st_normal">보통</span>
-                      </li>
-                      <li>
-                        <span class="st_busy">혼잡</span>
-                      </li>
-                      <li>
-                        <span class="verybusy">매우혼잡</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <!-- // .state_status -->
-                </div>
-                <!-- // .air_state -->
-              </div>
-              <!-- // .airProcess_time -->
-              <div class="airport_mosion">
-                <div class="mosion_top">
-                  <div class="walkLine">
-                    <div class="walkLine_ct">
-                      <div class="human"></div>
-                    </div>
-                    <!-- // .walkLine_ct -->
-                  </div>
-                  <!-- // .walkLine -->
-                  <ul class="cf">
-                    <li>공항 도착(주차)</li>
-                    <li>탑승권 자동발권</li>
-                    <li>수하물 위탁</li>
-                    <li>신분확인</li>
-                    <li>보안검색</li>
-                    <li>탑승시간</li>
-                    <li>출발</li>
-                  </ul>
-                </div>
-                <!-- // .mosion_top -->
-                <div class="mosion_bottom cf">
-                  <div class="MSB step_1">
-                    <div class="MSB_ct">
-                      <p class="MSB_busy">
-                        <em>탑승권 자동발권-수하물 위탁-신분확인 까지 소요시간</em>
-                        <strong> 21<span class="MSB_minute">분</span> </strong>
-                      </p>
-                    </div>
-                  </div>
-                  <!-- // .step_1 -->
-                  <div class="MSB step_2">
-                    <div class="MSB_ct">
-                      <p class="MSB_good">
-                        <em>신분확인-보안검색 까지 소요시간</em>
-                        <strong> 4<span class="MSB_minute">분</span> </strong>
-                      </p>
-                    </div>
-                  </div>
-                  <!-- // .step_2 -->
-                  <div class="MSB step_3">
-                    <div class="MSB_ct">
-                      <p class="MSB_verybusy">
-                        <em>보안검색-탑승시간 까지 소요시간</em>
-                        <strong> 24<span class="MSB_minute">분</span> </strong>
-                      </p>
-                    </div>
-                  </div>
-                  <!-- // .step_3 -->
-                  <div class="MSB step_4">
-                    <div class="MSB_ct">
-                      <p class="MSB_normal">
-                        <em>탑승시간-출발 까지 소요시간</em>
-                        <strong> 10<span class="MSB_minute">분</span> </strong>
-                      </p>
-                    </div>
-                  </div>
-                  <!-- // .step_4 -->
-                </div>
-                <!-- // .mosion_bottom -->
-              </div>
-              <!-- // .airport_mosion -->
-              <ul class="airport_mosion_txt">
-                <li>※ &nbsp;<span>탑승권 발권 및 수하물 위탁</span> 가능 시간은 항공사별 정책에 따라 달라질 수 있으며, 일반적으로 <span>국내선 항공기는 출발 예정 시각 30분전까지 가능</span>함에 유의하시기 바랍니다.</li>
-                <li>※ &nbsp;해당 소요시간 안내서비스는 탑승수속 구간별 여객이 체류하고 있는 <span>평균소요시간</span>을 안내하는 것으로, 기상상황 등 예상치 못한 요인에 따라 실제 소요시간과는 차이가 있을 수 있습니다.</li>
+      <div id="container">
+        <div id="banner">
+          <div class="banner_ct">
+            <div class="banner_slide_button">
+              <ul>
+                <li>
+                  <button>첫번째 슬라이드</button>
+                </li>
+                <li>
+                  <button>두번째 슬라이드</button>
+                </li>
+                <li>
+                  <button>세번째 슬라이드</button>
+                </li>
+                <li>
+                  <button>정지</button>
+                </li>
               </ul>
             </div>
-            <!-- // .airProcess_ct -->
-          </div>
-          <!-- // .area_1 -->
-        </div>
-        <!-- // #content1 -->
-        <div id="content2">
-          <div class="area_2">
-            <div class="guide_txt">
-              <p>AIRPORT GUIDE</p>
-              <p>공항가이드</p>
+            <!-- // .banner_slide_button -->
+            <div class="banner_txt">
+              <p>친절한 공항, 다시찾고싶은 공항</p>
+              <p>김포국제공항</p>
             </div>
-            <!-- // .guide_txt -->
-            <div class="guide_ct cf">
-              <div class="GD guide_come">
-                <p>공항 오기 전</p>
-                <a href="#">
-                  <img src="img/Icon_come_1.png" alt="오시는길" /><br />
-                  <span>오시는길</span>
-                </a>
-                <a href="#">
-                  <img src="img/Icon_come_2.png" alt="대중교통" /><br />
-                  <span>대중교통</span>
-                </a>
-                <a href="#">
-                  <img src="img/Icon_come_3.png" alt="주차안내" /><br />
-                  <span>주차안내</span>
-                </a>
-                <a href="#" class="GD_top">
-                  <img src="img/Icon_come_4.png" alt="기내반입 금지물품" /><br />
-                  <span>기내반입 금지물품</span>
-                </a>
-                <a href="#" class="GD_top">
-                  <img src="img/Icon_come_5.png" alt="항공편" /><br />
-                  <span>항공편</span>
-                </a>
-                <a href="#" class="GD_top">
-                  <img src="img/Icon_come_6.jpg" alt="공항 이용안내" /><br />
-                  <span>공항 이용안내</span>
-                </a>
-              </div>
-              <!-- // .guide_come -->
-              <div class="GD guide_in">
-                <p>공항에서</p>
-                <a href="#">
-                  <img src="img/Icon_in_1.png" alt="공항 이용안내" /><br />
-                  <span>공항이용 알짜팁</span>
-                </a>
-                <a href="#">
-                  <img src="img/Icon_in_2.png" alt="공항 이용안내" /><br />
-                  <span>편의시설</span>
-                </a>
-                <a href="#">
-                  <img src="img/Icon_in_3.png" alt="공항 이용안내" /><br />
-                  <span>상업시설</span>
-                </a>
-                <a href="#" class="GD_top">
-                  <img src="img/Icon_in_4.png" alt="공항 이용안내" /><br />
-                  <span>탑승수속</span>
-                </a>
-                <a href="#" class="GD_top">
-                  <img src="img/Icon_in_5.png" alt="공항 이용안내" /><br />
-                  <span>교통약자 서비스</span>
-                </a>
-                <a href="#" class="GD_top">
-                  <img src="img/Icon_in_6.png" alt="공항 이용안내" /><br />
-                  <span>수하물수취</span>
-                </a>
-              </div>
-              <!-- // .guide_in -->
+            <!-- // .banner_txt -->
+            <div class="banner_menu">
+              <a href="#" title="북마크 이동">
+                <span>
+                  <img src="img/Icon_banner_menu1.png" alt="탑승수속 소요시간" />
+                </span>
+                <b>탑승수속 소요시간</b>
+              </a>
+              <a href="#" title="북마크 이동">
+                <span>
+                  <img src="img/Icon_banner_menu2.png" alt="공항가이드" />
+                </span>
+                <b>공항가이드</b>
+              </a>
+              <a href="#" title="북마크 이동">
+                <span>
+                  <img src="img/Icon_banner_menu3.png" alt="항공권예약" />
+                </span>
+                <b>항공권예약</b>
+              </a>
+              <a href="#" title="북마크 이동">
+                <span>
+                  <img src="img/Icon_banner_menu4.png" alt="교통안내" />
+                </span>
+                <b>교통안내</b>
+              </a>
+              <a href="#" title="북마크 이동">
+                <span>
+                  <img src="img/Icon_banner_menu5.png" alt="시설안내" />
+                </span>
+                <b>시설안내</b>
+              </a>
             </div>
-            <!-- // .guide_ct -->
-          </div>
-          <!-- // .area_2 -->
-        </div>
-        <!-- // #content2 -->
-        <div id="content3">
-          <div class="area_3">
-            <div class="reserve">
-              <div class="reserve_txt">
-                <p>BOOK A FLIGHT</p>
-                <p>항공권예약</p>
-              </div>
-              <!-- // .reserve_txt -->
-              <fieldset>
-                <legend>항공권 검색 / 조회</legend>
-                <!-- 여기서부터 다시 작업하기 -->
-                <div class="reserve_line cf">
-                  <div class="re_button">
-                    <button class="re_domestic">국내선</button>
-                    <button class="re_international">국제선</button>
-                  </div>
-                  <!-- // .re_button -->
-                  <div class="re_check">
-                    <span class="both_way">
-                      <input type="radio" name="way" id="way1" checked />
-                      <label for="way1">왕복</label>
-                    </span>
-                    <span class="one_way">
-                      <input type="radio" name="way" id="way2" />
-                      <label for="way2">편도</label>
-                    </span>
-                  </div>
-                  <!-- // .re_check -->
+            <!-- // .banner_menu -->
+            <div class="banner_air_search">
+              <div class="air_search">
+                <div class="air_search_select">
+                  <button class="on">
+                    <span>출발</span>
+                  </button>
+                  <button>
+                    <span>도착</span>
+                  </button>
                 </div>
-                <div class="reserve_ct cf">
-                  <div class="re_block1 cf">
-                    <div class="start">
-                      <label>출발지</label>
-                      <select name="start_in">
-                        <option value="seoul">서울/김포</option>
-                        <option value="busan">부산/김해</option>
-                        <option value="jeju">제주</option>
-                        <option value="deagu">대구</option>
-                        <option value="ulsan">울산</option>
-                        <option value="cheongju">청주</option>
-                        <option value="muan">무안</option>
-                        <option value="gangju">광주</option>
-                        <option value="yeosu">여수</option>
-                        <option value="gyeongju">포항경주</option>
-                        <option value="yangyang">양양</option>
-                        <option value="sasheon">사천</option>
-                        <option value="gunsan">군산</option>
-                        <option value="oneju">횡성/원주</option>
+                <!-- // .air_search_select -->
+                <div class="air_search_box">
+                  <a href="#">출발/도착 안내</a>
+                  <div class="ASB airLocation">
+                    <label>공항</label>
+                    <button class="ASB_btt" type="button" title="선택옵션 확장됨">
+                      <span>서울/김포</span>
+                    </button>
+                    <div class="ASB_opt">
+                      <div class="ASB_opt_list">
+                        <ul class="ASB_opt_list_ct">
+                          <li class="on">
+                            <button type="button">서울/김포</button>
+                          </li>
+                          <li>
+                            <button type="button">부산/김해</button>
+                          </li>
+                          <li>
+                            <button type="button">제주</button>
+                          </li>
+                          <li>
+                            <button type="button">대구</button>
+                          </li>
+                          <li>
+                            <button type="button">울산</button>
+                          </li>
+                          <li>
+                            <button type="button">청주</button>
+                          </li>
+                          <li>
+                            <button type="button">무안</button>
+                          </li>
+                          <li>
+                            <button type="button">광주</button>
+                          </li>
+                          <li>
+                            <button type="button">여수</button>
+                          </li>
+                          <li>
+                            <button type="button">포항경주</button>
+                          </li>
+                          <li>
+                            <button type="button">양양</button>
+                          </li>
+                          <li>
+                            <button type="button">사천</button>
+                          </li>
+                          <li>
+                            <button type="button">군산</button>
+                          </li>
+                          <li>
+                            <button type="button">횡성/원주</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- // .ASB_opt_list -->
+                    </div>
+                    <!-- // .ASB_opt -->
+                  </div>
+                  <!-- // .airLocation -->
+                  <div class="ASB airTime">
+                    <label>시간</label>
+                    <div class="airTime_time">
+                      <select name="setHour" class="ATS" id="setTime" title="시작시간-시">
+                        <option value="00" selected="selected">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                      </select>
+                      <select name="setMin" class="ATS" id="setTime" title="시작시간-분">
+                        <option value="00" selected="selected">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
                       </select>
                     </div>
-                    <!-- // .start -->
-                    <div class="arrive">
-                      <label>도착지</label>
-                      <select name="arrive">
-                        <option value="gangju">광주</option>
-                        <option value="muan">무안</option>
-                        <option value="busan">부산/김해</option>
-                        <option value="yangyang">양양</option>
-                        <option value="yeosu">여수</option>
-                        <option value="ulsan">울산</option>
-                        <option value="jeju">제주</option>
-                        <option value="sasheon">진주/사천</option>
-                        <option value="gyeongju">포항/포항경주</option>
+                    <!-- // .airTime_time -->
+                    <span>~</span>
+                    <div class="airTime_time">
+                      <select name="endHour" class="ATS" id="setTime" title="시작시간-시">
+                        <option value="00" selected="selected">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                      </select>
+                      <select name="endMin" class="ATS" id="setTime" title="시작시간-분">
+                        <option value="00" selected="selected">00</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="36">36</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="39">39</option>
+                        <option value="40">40</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="50">50</option>
+                        <option value="51">51</option>
+                        <option value="52">52</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="56">56</option>
+                        <option value="57">57</option>
+                        <option value="58">58</option>
+                        <option value="59">59</option>
                       </select>
                     </div>
-                    <!-- // .arrive -->
+                    <!-- // .airTime_time -->
                   </div>
-                  <!-- // .re_block1 -->
-                  <div class="re_block2 cf">
-                    <div class="come_in_day cf">
-                      <label>가는날 / 오는날</label>
-                      <input type="text" placeholder="가는날 입력" />
-                      <span>~</span>
-                      <input type="text" placeholder="오는날 입력" />
+                  <!-- // .airTime -->
+                  <div class="ASB airSection">
+                    <label>구분</label>
+                    <button class="ASB_btt" type="button" title="선택옵션 확장됨">
+                      <span>전체</span>
+                    </button>
+                    <div class="ASB_opt">
+                      <div class="ASB_opt_list">
+                        <ul class="ASB_opt_list_ct">
+                          <li class="on">
+                            <button type="button">전체</button>
+                          </li>
+                          <li>
+                            <button type="button">국내선</button>
+                          </li>
+                          <li>
+                            <button type="button">국제선</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- // .ASB_opt_list -->
                     </div>
-                    <!-- // .come_in_day -->
+                    <!-- // .ASB_opt -->
                   </div>
-                  <!-- // .re_block2 -->
-                  <div class="guests">
-                    <label>탑승객</label>
-                    <select name="guest">
-                      <option value="all">성인 1, 유아 0, 소아 0</option>
-                      <option value="adult">성인</option>
-                      <option value="child">소아</option>
-                      <option value="baby">유아</option>
-                    </select>
+                  <!-- // .airSection -->
+                  <div class="ASB airLine">
+                    <label>항공사</label>
+                    <button class="ASB_btt" type="button" title="선택옵션 확장됨">
+                      <span>선택</span>
+                    </button>
+                    <div class="ASB_opt">
+                      <div class="ASB_opt_list">
+                        <ul class="ASB_opt_list_ct">
+                          <li class="on">
+                            <button type="button">선택</button>
+                          </li>
+                          <li>
+                            <button type="button">대한항공</button>
+                          </li>
+                          <li>
+                            <button type="button">아시아나</button>
+                          </li>
+                          <li>
+                            <button type="button">에어부산</button>
+                          </li>
+                          <li>
+                            <button type="button">에어서울</button>
+                          </li>
+                          <li>
+                            <button type="button">제주항공</button>
+                          </li>
+                          <li>
+                            <button type="button">진에어</button>
+                          </li>
+                          <li>
+                            <button type="button">티웨이</button>
+                          </li>
+                          <li>
+                            <button type="button">하이에어</button>
+                          </li>
+                          <li>
+                            <button type="button">플라이강원</button>
+                          </li>
+                          <li>
+                            <button type="button">에어로케이항공</button>
+                          </li>
+                          <li>
+                            <button type="button">에어프레미아</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- // .ASB_opt_list -->
+                    </div>
+                    <!-- // .ASB_opt -->
                   </div>
-                  <div class="seats">
-                    <label>좌석등급</label>
-                    <select name="seat">
-                      <option value="whole">전체</option>
-                      <option value="genera">일반석</option>
-                      <option value="business">비즈니스석</option>
-                      <option value="discount">할인석</option>
-                      <option value="special">특가석</option>
-                    </select>
+                  <!-- // .airLine -->
+                  <div class="ASB airCarrier">
+                    <label>편명</label>
+                    <input type="text" name="airCarrier" id="" placeholder="편명 입력" title="편명 입력" />
                   </div>
+                  <!-- // .airCarrier -->
+                  <button type="button" title="조회버튼">조회</button>
+                  <div class="weather">
+                    <img src="img/Icon_weather_sun.svg" alt="sun" />
+                    <p>27</p>
+                  </div>
+                  <!-- // .weather -->
                 </div>
-                <!-- // .reserve_ct -->
-                <div class="reserve_bt">
-                  <input type="button" value="조회하기" />
-                </div>
-                <!-- // .reserve_bt -->
-              </fieldset>
+                <!-- // .air_search_box -->
+              </div>
+              <!-- // .air_search -->
             </div>
+            <!-- // .banner_air_search -->
           </div>
-          <!-- // .area_3 -->
         </div>
-        <!-- // #content3 -->
-        <div id="content4">
-          <div class="area_4 cf">
-            <div class="parking_state">
-              <div class="parking_st_txt cf">
-                <p>PARKING LOT STATUS</p>
-                <p>주차 현황</p>
+        <!-- // #banner -->
+        <div id="contents">
+          <div id="content1">
+            <div class="area_1">
+              <div class="airProcess_txt">
+                <p>BOARDING PROCESS TIME</p>
+                <p>공항 탑승수속 소요시간 안내</p>
+                <p>항공권 발권부터 항공기 출발까지 실시간 평균 소요시간 안내</p>
               </div>
-              <div class="parking1 cf">
-                <p>국내선 제 1 주차장</p>
-                <span>.</span>
-                <span>.</span>
-                <span>.</span>
-                <span class="pk_st">혼잡</span>
+              <!-- // .airProcess_txt -->
+              <div class="airProcess_ct">
+                <div class="airProcess_time">
+                  <div class="processTime">
+                    <strong class="totalTime">00<span>분</span></strong>
+                  </div>
+                  <!-- // .processTime -->
+                  <div class="processState cf">
+                    <div class="state_current">
+                      <strong class="current_time">PM 00:00</strong>
+                      <span>기준</span>
+                      <button type="button">리로드</button>
+                    </div>
+                    <!-- // .state_current -->
+                    <div class="state_type">
+                      <button type="button" class="st_domestic on">국내선</button>
+                      <button type="button" class="st_international" onclick="alert('아직 준비중입니다.')">국제선</button>
+                    </div>
+                    <!-- // .state_type -->
+                    <div class="state_status">
+                      <ul class="cf">
+                        <li>
+                          <span class="st_good">원활</span>
+                        </li>
+                        <li>
+                          <span class="st_normal">보통</span>
+                        </li>
+                        <li>
+                          <span class="st_busy">혼잡</span>
+                        </li>
+                        <li>
+                          <span class="verybusy">매우혼잡</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- // .state_status -->
+                  </div>
+                  <!-- // .air_state -->
+                </div>
+                <!-- // .airProcess_time -->
+                <div class="airport_mosion">
+                  <div class="mosion_top">
+                    <div class="walkLine">
+                      <div class="walkLine_ct">
+                        <div class="human"></div>
+                      </div>
+                      <!-- // .walkLine_ct -->
+                    </div>
+                    <!-- // .walkLine -->
+                    <ul class="cf">
+                      <li>공항 도착(주차)</li>
+                      <li>탑승권 자동발권</li>
+                      <li>수하물 위탁</li>
+                      <li>신분확인</li>
+                      <li>보안검색</li>
+                      <li>탑승시간</li>
+                      <li>출발</li>
+                    </ul>
+                  </div>
+                  <!-- // .mosion_top -->
+                  <div class="mosion_bottom cf">
+                    <div class="MSB step_1">
+                      <div class="MSB_ct">
+                        <p class="MSB_busy">
+                          <em>탑승권 자동발권-수하물 위탁-신분확인 까지 소요시간</em>
+                          <strong> 21<span class="MSB_minute">분</span> </strong>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- // .step_1 -->
+                    <div class="MSB step_2">
+                      <div class="MSB_ct">
+                        <p class="MSB_good">
+                          <em>신분확인-보안검색 까지 소요시간</em>
+                          <strong> 4<span class="MSB_minute">분</span> </strong>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- // .step_2 -->
+                    <div class="MSB step_3">
+                      <div class="MSB_ct">
+                        <p class="MSB_verybusy">
+                          <em>보안검색-탑승시간 까지 소요시간</em>
+                          <strong> 24<span class="MSB_minute">분</span> </strong>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- // .step_3 -->
+                    <div class="MSB step_4">
+                      <div class="MSB_ct">
+                        <p class="MSB_normal">
+                          <em>탑승시간-출발 까지 소요시간</em>
+                          <strong> 10<span class="MSB_minute">분</span> </strong>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- // .step_4 -->
+                  </div>
+                  <!-- // .mosion_bottom -->
+                </div>
+                <!-- // .airport_mosion -->
+                <ul class="airport_mosion_txt">
+                  <li>※ &nbsp;<span>탑승권 발권 및 수하물 위탁</span> 가능 시간은 항공사별 정책에 따라 달라질 수 있으며, 일반적으로 <span>국내선 항공기는 출발 예정 시각 30분전까지 가능</span>함에 유의하시기 바랍니다.</li>
+                  <li>※ &nbsp;해당 소요시간 안내서비스는 탑승수속 구간별 여객이 체류하고 있는 <span>평균소요시간</span>을 안내하는 것으로, 기상상황 등 예상치 못한 요인에 따라 실제 소요시간과는 차이가 있을 수 있습니다.</li>
+                </ul>
               </div>
-              <div class="parking2 cf">
-                <p>국내선 제 2 주차장</p>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span class="pk_st">원활</span>
-              </div>
-              <div class="parking3 cf">
-                <p>국제선 지하주차장</p>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span class="pk_st">원활</span>
-              </div>
-              <div class="parking4 cf">
-                <p>국제선 주차빌딩</p>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span class="pk_st">원활</span>
-              </div>
-              <div class="parking5 cf">
-                <p>화물청사 주차장</p>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span class="pk_st">원활</span>
-              </div>
+              <!-- // .airProcess_ct -->
             </div>
-            <!-- // .parking_state -->
-            <div class="parking_reserve">
-              <div class="parking_re_txt">
-                <p>PARKING RESERVATION</p>
-                <p>주차 예약</p>
+            <!-- // .area_1 -->
+          </div>
+          <!-- // #content1 -->
+          <div id="content2">
+            <div class="area_2">
+              <div class="area2_txt">
+                <p class="mini_title">AIRPORT GUIDE</p>
+                <p class="big_title">공항가이드</p>
               </div>
-              <!-- // .parking_re_txt -->
-              <div class="parking_re_ct cf">
+              <!-- // .area2_txt -->
+              <div class="area2_ct">
+                <div class="Guide guide_come">
+                  <p>공항 오기 전</p>
+                  <a href="#">
+                    <img src="img/Icon_come_1.png" alt="오시는 길" />
+                    <span>오시는 길</span>
+                  </a>
+                  <a href="#">
+                    <img src="img/Icon_come_2.png" alt="대중교통" />
+                    <span>대중교통</span>
+                  </a>
+                  <a href="#">
+                    <img src="img/Icon_come_3.png" alt="주차안내" />
+                    <span>주차안내</span>
+                  </a>
+                  <a href="#" class="GD_icon_top">
+                    <img src="img/Icon_come_4.png" alt="기내반입 금지물품" />
+                    <span>기내반입 금지물품</span>
+                  </a>
+                  <a href="#" class="GD_icon_top">
+                    <img src="img/Icon_come_5.png" alt="항공편" />
+                    <span>항공편</span>
+                  </a>
+                  <a href="#" class="GD_icon_top">
+                    <img src="img/Icon_come_6.jpg" alt="공항 이용안내" />
+                    <span>공항 이용안내</span>
+                  </a>
+                </div>
+                <!-- // .guide_come -->
+                <div class="Guide guide_in">
+                  <p>공항에서</p>
+                  <a href="#">
+                    <img src="img/Icon_in_1.png" alt="공항 이용안내" />
+                    <span>공항이용 알짜팁</span>
+                  </a>
+                  <a href="#">
+                    <img src="img/Icon_in_2.png" alt="공항 이용안내" />
+                    <span>편의시설</span>
+                  </a>
+                  <a href="#">
+                    <img src="img/Icon_in_3.png" alt="공항 이용안내" />
+                    <span>상업시설</span>
+                  </a>
+                  <a href="#" class="GD_icon_top">
+                    <img src="img/Icon_in_4.png" alt="공항 이용안내" />
+                    <span>탑승수속</span>
+                  </a>
+                  <a href="#" class="GD_icon_top">
+                    <img src="img/Icon_in_5.png" alt="공항 이용안내" />
+                    <span>교통약자 서비스</span>
+                  </a>
+                  <a href="#" class="GD_icon_top">
+                    <img src="img/Icon_in_6.png" alt="공항 이용안내" />
+                    <span>수하물수취</span>
+                  </a>
+                </div>
+                <!-- // .guide_in -->
+              </div>
+              <!-- // .area2_ct -->
+            </div>
+            <!-- // .area_2 -->
+          </div>
+          <!-- // #content2 -->
+          <div id="content3">
+            <div class="area_3">
+              <div class="reserve">
+                <div class="reserve_txt">
+                  <p class="mini_title">BOOK A FLIGHT</p>
+                  <p class="big_title">항공권예약</p>
+                </div>
+                <!-- // .reserve_txt -->
                 <fieldset>
-                  <div class="pk_in_day cf">
-                    <label>예약입차일시</label>
-                    <input type="text" placeholder="예약입차 일시 입력" />
-                    <select name="pk_in_hour">
-                      <option value="00">00시</option>
-                      <option value="01">01시</option>
-                      <option value="02">02시</option>
-                      <option value="03">03시</option>
-                      <option value="04">04시</option>
-                      <option value="05">05시</option>
-                      <option value="06">06시</option>
-                      <option value="07">07시</option>
-                      <option value="08">08시</option>
-                      <option value="09">09시</option>
-                      <option value="10">10시</option>
-                      <option value="11">11시</option>
-                      <option value="12">12시</option>
-                      <option value="13">13시</option>
-                      <option value="14">14시</option>
-                      <option value="15">15시</option>
-                      <option value="16">16시</option>
-                      <option value="17">17시</option>
-                      <option value="18">18시</option>
-                      <option value="19">19시</option>
-                      <option value="20">20시</option>
-                      <option value="21">21시</option>
-                      <option value="22">22시</option>
-                      <option value="23">23시</option>
-                    </select>
-                    <select name="pk_in_minute">
-                      <option value="00">00분</option>
-                      <option value="10">10분</option>
-                      <option value="20">20분</option>
-                      <option value="30">30분</option>
-                      <option value="40">40분</option>
-                      <option value="50">50분</option>
-                    </select>
+                  <legend>항공권 검색 / 조회</legend>
+                  <div class="reserve_line">
+                    <button type="button" class="re_domestic on">
+                      <span>국내선</span>
+                    </button>
+                    <button type="button" class="re_international">
+                      <span>국제선</span>
+                    </button>
+                    <div class="re_check">
+                      <span>
+                        <input type="radio" name="way" id="both_way" value="B_way" checked />
+                        <label for="both_way">왕복</label>
+                      </span>
+                      <span>
+                        <input type="radio" name="way" id="one_way" value="O_way" />
+                        <label for="one_way">편도</label>
+                      </span>
+                    </div>
+                    <!-- // .re_check -->
                   </div>
-                  <!-- // .pk_in_day -->
-                  <div class="pk_out_day cf">
-                    <label>예약출차일시</label>
-                    <input type="text" placeholder="예약출차 일시 입력" />
-                    <select name="pk_out_hour">
-                      <option value="00">00시</option>
-                      <option value="01">01시</option>
-                      <option value="02">02시</option>
-                      <option value="03">03시</option>
-                      <option value="04">04시</option>
-                      <option value="05">05시</option>
-                      <option value="06">06시</option>
-                      <option value="07">07시</option>
-                      <option value="08">08시</option>
-                      <option value="09">09시</option>
-                      <option value="10">10시</option>
-                      <option value="11">11시</option>
-                      <option value="12">12시</option>
-                      <option value="13">13시</option>
-                      <option value="14">14시</option>
-                      <option value="15">15시</option>
-                      <option value="16">16시</option>
-                      <option value="17">17시</option>
-                      <option value="18">18시</option>
-                      <option value="19">19시</option>
-                      <option value="20">20시</option>
-                      <option value="21">21시</option>
-                      <option value="22">22시</option>
-                      <option value="23">23시</option>
-                    </select>
-                    <select name="pk_out_minute">
-                      <option value="00">00분</option>
-                      <option value="10">10분</option>
-                      <option value="20">20분</option>
-                      <option value="30">30분</option>
-                      <option value="40">40분</option>
-                      <option value="50">50분</option>
-                    </select>
+                  <div class="reserve_ct">
+                    <div class="Reserve">
+                      <div class="re_option">
+                        <label>출발지</label>
+                        <select class="re_block" name="start" title="출발지 공항을 선택해주세요">
+                          <option value="seoul">서울/김포</option>
+                          <option value="busan">부산/김해</option>
+                          <option value="jeju">제주</option>
+                          <option value="deagu">대구</option>
+                          <option value="ulsan">울산</option>
+                          <option value="cheongju">청주</option>
+                          <option value="muan">무안</option>
+                          <option value="gangju">광주</option>
+                          <option value="yeosu">여수</option>
+                          <option value="gyeongju">포항경주</option>
+                          <option value="yangyang">양양</option>
+                          <option value="sasheon">사천</option>
+                          <option value="gunsan">군산</option>
+                          <option value="oneju">횡성/원주</option>
+                        </select>
+                      </div>
+                      <div class="re_option">
+                        <label>도착지</label>
+                        <select class="re_block" name="arrive" title="도착지 공항을 선택해주세요">
+                          <option value="gangju">광주</option>
+                          <option value="muan">무안</option>
+                          <option value="busan">부산/김해</option>
+                          <option value="yangyang">양양</option>
+                          <option value="yeosu">여수</option>
+                          <option value="ulsan">울산</option>
+                          <option value="jeju">제주</option>
+                          <option value="sasheon">진주/사천</option>
+                          <option value="gyeongju">포항/포항경주</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- // .Reserve 1 -->
+                    <div class="Reserve">
+                      <div class="re_option">
+                        <label>가는날 / 오는날</label>
+                        <input type="text" placeholder="가는날 입력" />
+                        <span class="re_line">~</span>
+                        <input type="text" placeholder="오는날 입력" />
+                      </div>
+                      <!-- // .come_in_day -->
+                    </div>
+                    <!-- // .Reserve 2 -->
+                    <div class="Reserve guests">
+                      <label>탑승객</label>
+                      <select name="guest">
+                        <option value="all">성인 1, 유아 0, 소아 0</option>
+                        <option value="adult">성인</option>
+                        <option value="child">소아</option>
+                        <option value="baby">유아</option>
+                      </select>
+                    </div>
+                    <!-- // .guests -->
+                    <div class="Reserve seats">
+                      <label>좌석등급</label>
+                      <select name="seat">
+                        <option value="whole">전체</option>
+                        <option value="genera">일반석</option>
+                        <option value="business">비즈니스석</option>
+                        <option value="discount">할인석</option>
+                        <option value="special">특가석</option>
+                      </select>
+                    </div>
+                    <!-- // .seats -->
                   </div>
-                  <!-- // .pk_out_day -->
-                  <div class="pk_select cf">
-                    <label>차량선택</label>
-                    <select name="pk_select_car">
-                      <option value="nomal">일반</option>
-                      <option value="impaired">장애인</option>
-                    </select>
+                  <!-- // .reserve_ct -->
+                  <div class="reserve_bt">
+                    <input type="button" value="조회하기" />
                   </div>
-                  <!-- // . -->
-                  <div class="pk_reserve cf">
-                    <input type="button" value="예약하기" />
-                  </div>
-                  <div class="pk_link cf">
-                    <a href="#">
-                      <img src="img/Parking_Fee.png" alt="주차 요금 안내" />
-                      <span>PARKING FEE</span>
-                      <b>주차 요금 안내</b>
-                    </a>
-                    <a href="#">
-                      <img src="img/Parking_Cancel.png" alt="예약 변경/취소" />
-                      <span>CHANGE/CANCEL</span>
-                      <b>예약 변경/취소</b>
-                    </a>
-                  </div>
-                  <!-- // . -->
+                  <!-- // .reserve_bt -->
                 </fieldset>
               </div>
-              <!-- // .parking_re_ct -->
             </div>
-            <!-- // .parking_reserve -->
+            <!-- // .area_3 -->
           </div>
-          <!-- // .area_4 -->
-        </div>
-        <!-- // #content4 -->
-        <div id="content5">
-          <div class="area_5 cf">
-            <div class="traffic_txt">
-              <p>PUBLIC TRANSPORT</p>
-              <p>교통안내</p>
+          <!-- // #content3 -->
+          <div id="content4">
+            <div class="area_4 cf">
+              <div class="parking_state">
+                <div class="parking_st_txt cf">
+                  <p>PARKING LOT STATUS</p>
+                  <p>주차 현황</p>
+                </div>
+                <div class="parking1 cf">
+                  <p>국내선 제 1 주차장</p>
+                  <span>.</span>
+                  <span>.</span>
+                  <span>.</span>
+                  <span class="pk_st">혼잡</span>
+                </div>
+                <div class="parking2 cf">
+                  <p>국내선 제 2 주차장</p>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span class="pk_st">원활</span>
+                </div>
+                <div class="parking3 cf">
+                  <p>국제선 지하주차장</p>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span class="pk_st">원활</span>
+                </div>
+                <div class="parking4 cf">
+                  <p>국제선 주차빌딩</p>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span class="pk_st">원활</span>
+                </div>
+                <div class="parking5 cf">
+                  <p>화물청사 주차장</p>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span class="pk_st">원활</span>
+                </div>
+              </div>
+              <!-- // .parking_state -->
+              <div class="parking_reserve">
+                <div class="parking_re_txt">
+                  <p>PARKING RESERVATION</p>
+                  <p>주차 예약</p>
+                </div>
+                <!-- // .parking_re_txt -->
+                <div class="parking_re_ct cf">
+                  <fieldset>
+                    <div class="pk_in_day cf">
+                      <label>예약입차일시</label>
+                      <input type="text" placeholder="예약입차 일시 입력" />
+                      <select name="pk_in_hour">
+                        <option value="00">00시</option>
+                        <option value="01">01시</option>
+                        <option value="02">02시</option>
+                        <option value="03">03시</option>
+                        <option value="04">04시</option>
+                        <option value="05">05시</option>
+                        <option value="06">06시</option>
+                        <option value="07">07시</option>
+                        <option value="08">08시</option>
+                        <option value="09">09시</option>
+                        <option value="10">10시</option>
+                        <option value="11">11시</option>
+                        <option value="12">12시</option>
+                        <option value="13">13시</option>
+                        <option value="14">14시</option>
+                        <option value="15">15시</option>
+                        <option value="16">16시</option>
+                        <option value="17">17시</option>
+                        <option value="18">18시</option>
+                        <option value="19">19시</option>
+                        <option value="20">20시</option>
+                        <option value="21">21시</option>
+                        <option value="22">22시</option>
+                        <option value="23">23시</option>
+                      </select>
+                      <select name="pk_in_minute">
+                        <option value="00">00분</option>
+                        <option value="10">10분</option>
+                        <option value="20">20분</option>
+                        <option value="30">30분</option>
+                        <option value="40">40분</option>
+                        <option value="50">50분</option>
+                      </select>
+                    </div>
+                    <!-- // .pk_in_day -->
+                    <div class="pk_out_day cf">
+                      <label>예약출차일시</label>
+                      <input type="text" placeholder="예약출차 일시 입력" />
+                      <select name="pk_out_hour">
+                        <option value="00">00시</option>
+                        <option value="01">01시</option>
+                        <option value="02">02시</option>
+                        <option value="03">03시</option>
+                        <option value="04">04시</option>
+                        <option value="05">05시</option>
+                        <option value="06">06시</option>
+                        <option value="07">07시</option>
+                        <option value="08">08시</option>
+                        <option value="09">09시</option>
+                        <option value="10">10시</option>
+                        <option value="11">11시</option>
+                        <option value="12">12시</option>
+                        <option value="13">13시</option>
+                        <option value="14">14시</option>
+                        <option value="15">15시</option>
+                        <option value="16">16시</option>
+                        <option value="17">17시</option>
+                        <option value="18">18시</option>
+                        <option value="19">19시</option>
+                        <option value="20">20시</option>
+                        <option value="21">21시</option>
+                        <option value="22">22시</option>
+                        <option value="23">23시</option>
+                      </select>
+                      <select name="pk_out_minute">
+                        <option value="00">00분</option>
+                        <option value="10">10분</option>
+                        <option value="20">20분</option>
+                        <option value="30">30분</option>
+                        <option value="40">40분</option>
+                        <option value="50">50분</option>
+                      </select>
+                    </div>
+                    <!-- // .pk_out_day -->
+                    <div class="pk_select cf">
+                      <label>차량선택</label>
+                      <select name="pk_select_car">
+                        <option value="nomal">일반</option>
+                        <option value="impaired">장애인</option>
+                      </select>
+                    </div>
+                    <!-- // . -->
+                    <div class="pk_reserve cf">
+                      <input type="button" value="예약하기" />
+                    </div>
+                    <div class="pk_link cf">
+                      <a href="#">
+                        <img src="img/Parking_Fee.png" alt="주차 요금 안내" />
+                        <span>PARKING FEE</span>
+                        <b>주차 요금 안내</b>
+                      </a>
+                      <a href="#">
+                        <img src="img/Parking_Cancel.png" alt="예약 변경/취소" />
+                        <span>CHANGE/CANCEL</span>
+                        <b>예약 변경/취소</b>
+                      </a>
+                    </div>
+                    <!-- // . -->
+                  </fieldset>
+                </div>
+                <!-- // .parking_re_ct -->
+              </div>
+              <!-- // .parking_reserve -->
             </div>
-            <div class="traffic_ct">
-              <div class="tr_img1">
-                <div class="tr_txt1">
-                  <span>BY BUS</span>
-                  <b>버스 이용</b>
-                  <p>국내선 1층 서편 (1번 게이트 부근) 시외버스 ‘11-1, 11-2, 11-3, 11-4’ 번을 이용하세요.</p>
-                </div>
+            <!-- // .area_4 -->
+          </div>
+          <!-- // #content4 -->
+          <div id="content5">
+            <div class="area_5 cf">
+              <div class="traffic_txt">
+                <p>PUBLIC TRANSPORT</p>
+                <p>교통안내</p>
               </div>
-              <div class="tr_img2">
-                <div class="tr_txt2">
-                  <span>BY TAXI</span>
-                  <b>택시 이용</b>
-                  <p>국내선 6,8번 게이트로 나가서 횡단보도를 건너면 택시 승강장이 있습니다.</p>
+              <div class="traffic_ct">
+                <div class="tr_img1">
+                  <div class="tr_txt1">
+                    <span>BY BUS</span>
+                    <b>버스 이용</b>
+                    <p>국내선 1층 서편 (1번 게이트 부근) 시외버스 ‘11-1, 11-2, 11-3, 11-4’ 번을 이용하세요.</p>
+                  </div>
                 </div>
-              </div>
-              <div class="tr_img3">
-                <div class="tr_txt3">
-                  <span>BY SUBWAY</span>
-                  <b>지하철 이용</b>
-                  <p>국내선 1층 서편 지하철 에스컬레이터를 타고 내려가면 ‘5, 9호선과 공항철도’ 김포공항역이 있습니다.</p>
+                <div class="tr_img2">
+                  <div class="tr_txt2">
+                    <span>BY TAXI</span>
+                    <b>택시 이용</b>
+                    <p>국내선 6,8번 게이트로 나가서 횡단보도를 건너면 택시 승강장이 있습니다.</p>
+                  </div>
+                </div>
+                <div class="tr_img3">
+                  <div class="tr_txt3">
+                    <span>BY SUBWAY</span>
+                    <b>지하철 이용</b>
+                    <p>국내선 1층 서편 지하철 에스컬레이터를 타고 내려가면 ‘5, 9호선과 공항철도’ 김포공항역이 있습니다.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- // #content5 -->
-        <div id="content6">
-          <div class="area_6">
-            <div class="service_txt">
-              <p>AT THE AIRPORT</p>
-              <p>시설안내</p>
+          <!-- // #content5 -->
+          <div id="content6">
+            <div class="area_6">
+              <div class="service_txt">
+                <p>AT THE AIRPORT</p>
+                <p>시설안내</p>
+              </div>
+              <div class="service_ct cf">
+                <div class="sv_tip">
+                  <a href="#">
+                    <span>공항이용 알짜팁</span>
+                    <b>GIMPO</b>
+                  </a>
+                </div>
+                <div class="sv_facility">
+                  <a href="#">
+                    <span>FACILITIES INFORMATION</span>
+                    <b>시설안내</b>
+                  </a>
+                </div>
+                <div class="sv_traffic">
+                  <a href="#">
+                    <span>SPECIAL ASSISTANCE</span>
+                    <b>교통약자 서비스</b>
+                  </a>
+                </div>
+                <div class="sv_call">
+                  <a href="#">
+                    <span>CONTACT INFORMATION</span>
+                    <b>전화번호안내</b>
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="service_ct cf">
-              <div class="sv_tip">
-                <a href="#">
-                  <span>공항이용 알짜팁</span>
-                  <b>GIMPO</b>
-                </a>
-              </div>
-              <div class="sv_facility">
-                <a href="#">
-                  <span>FACILITIES INFORMATION</span>
-                  <b>시설안내</b>
-                </a>
-              </div>
-              <div class="sv_traffic">
-                <a href="#">
-                  <span>SPECIAL ASSISTANCE</span>
-                  <b>교통약자 서비스</b>
-                </a>
-              </div>
-              <div class="sv_call">
-                <a href="#">
-                  <span>CONTACT INFORMATION</span>
-                  <b>전화번호안내</b>
-                </a>
-              </div>
-            </div>
+            <!-- // #content6 -->
           </div>
           <!-- // #content6 -->
         </div>
@@ -1390,9 +1404,16 @@
             </div>
           </div>
         </footer>
-        <!-- // footer -->
+        <!-- // #footer -->
       </div>
+      <!-- // #container -->
     </div>
     <!-- // #wrap -->
+
+    <!-- JS / JQ -->
+    <!-- CDN 방식 X, 다운로드 방식 O -->
+    <!-- jQuery Core 1.12.4 minified 을 사용할 것 (IE 호환성 문제) -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/gnb.js"></script>
   </body>
 </html>

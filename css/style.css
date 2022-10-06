@@ -1,3 +1,27 @@
+/* ============================== skipnavi */
+.skip_menu {
+  width: 100%;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  font-size: 0;
+  text-indent: -9999px;
+  z-index: 99999;
+}
+.skip_menu li a:focus,
+.skip_menu li a:active {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  background: #000;
+  color: #ffffff;
+  position: absolute;
+  top: 100px;
+  text-indent: 0px;
+}
 /* ============================== wrap */
 #wrap {
 }
@@ -188,10 +212,13 @@ header {
   height: 130px;
   position: absolute;
   top: 110px;
-  /* left: 0; */
   /* 팝업닫기 누르면 맨위로 ! */
   /* top: 0; */
+  /* left: 0; */
   overflow: hidden;
+  z-index: 1000;
+  transition: top 0.2s;
+  -webkit-transition: top 0.2s;
 }
 /* header > header_top */
 .header_top {
@@ -202,13 +229,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: right;
+  text-align: right;
+  font-size: 0;
+  z-index: 1001;
+  /* transition: 0.2s; */
 }
 .header_top > a {
   display: inline-block;
+  color: #fff;
   font-size: 15px;
   font-weight: 300;
   text-align: left;
-  color: #fff;
   overflow: hidden;
   margin-right: 14px;
   padding-right: 14px;
@@ -221,26 +252,28 @@ header {
   height: 13px;
   background: rgba(255, 255, 255, 0.2);
   position: absolute;
-  right: 0;
   top: 6px;
+  right: 0;
 }
 /* header_top > lang_box */
 .lang_box {
+  display: inline-block;
   margin-right: 30px;
   position: relative;
 }
 .lang_box button {
+  display: inline-block;
+  height: 19px;
   padding-right: 17px;
   background: url(../img/Icon_lang_box_down.png) no-repeat right center;
-  display: inline-block;
+  color: #fff;
   font-size: 15px;
   font-weight: 300;
   text-align: left;
-  color: #fff;
+  line-height: 20px;
   overflow: hidden;
 }
 .lang {
-  /* display: none; 임의설정 */
   display: none;
   width: 80px;
   margin-left: -40px;
@@ -252,33 +285,33 @@ header {
   left: 50%;
   top: -6px;
   overflow: hidden;
-  z-index: 100;
+  z-index: 1002;
+}
+.lang.on {
+  display: block;
 }
 .lang ul li {
   display: block;
-  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  margin-bottom: 7px;
+  padding-left: 1px;
   font-size: 15px;
-  font-weight: 400;
   line-height: 19px;
   text-align: left;
-  color: #000;
-  margin-bottom: 7px;
 }
 .lang ul li:last-child {
   margin-bottom: 0;
 }
 .lang ul li a {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: 350;
-  line-height: inherit;
-  color: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  color: #000;
 }
 .lang ul li:first-child a {
   display: block;
   background: url(../img/Icon_lang_box_up.png) no-repeat right center;
 }
-/* header_top > close_pop_btt */
+/* header_top > pop_up_btt */
 .pop_up_btt {
   padding-right: 28px;
   background: url(../img/Icon_pop_up.png) no-repeat right center;
@@ -339,9 +372,9 @@ header {
   right: 45px;
   top: 25px;
   width: 235px;
-  box-sizing: border-box;
   font-size: 0;
   text-align: right;
+  z-index: 1100;
 }
 .nav_util > button {
   display: inline-block;
@@ -349,12 +382,13 @@ header {
   height: 40px;
   margin-left: 15px;
   background: url(../img/Icon_nav_search.png) no-repeat center;
+  color: #fff;
   font-size: 15px;
   line-height: 40px;
   text-align: left;
-  color: #fff;
-  text-indent: -999px;
+  text-indent: -99999px;
   overflow: hidden;
+  vertical-align: top;
 }
 /* nav_util > move_airport */
 .move_airport {
@@ -809,6 +843,23 @@ header {
   /* 나중에 높이 지우기 */
   height: 5207.58px;
 }
+/* ============================== */
+/* contents 에 모두 동일하게 적용되는 요소들 */
+/* ============================== */
+.mini_title {
+  color: #00589e;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  line-height: 1em;
+  margin-bottom: 10px;
+}
+.big_title {
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  line-height: 1em;
+}
 /* ============================== content1 */
 #content1 {
   background-color: #ffffff;
@@ -1138,11 +1189,11 @@ header {
 }
 /* ============================== content2 */
 #content2 {
-  background-color: #e9edf4;
   width: 100%;
   height: auto;
+  background-color: #e9edf4;
 }
-/* area_2 */
+/* content2 > area_2 */
 .area_2 {
   max-width: 1180px;
   width: 100%;
@@ -1150,47 +1201,32 @@ header {
   margin: 0 auto;
   padding: 175px 0 100px;
 }
-/* area_2 > guide_txt */
-.area_2 .guide_txt {
+/* area_2 > area2_txt */
+.area_2 > .area2_txt {
   width: 100%;
   height: auto;
   text-align: center;
 }
-.guide_txt p:first-child {
-  margin-bottom: 10px;
-  color: #00589e;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  line-height: 1em;
-}
-.guide_txt p:last-child {
-  font-size: 48px;
-  font-weight: bold;
-  line-height: 1em;
-  letter-spacing: -0.5px;
-}
-/* area_2 > guide_ct */
-.area_2 .guide_ct {
+/* area_2 > area2_ct */
+.area_2 > .area2_ct {
   max-width: 1180px;
   width: 100%;
   margin: 65px auto 0;
   font-size: 0;
+  display: flex;
+  justify-content: center;
 }
-.guide_ct .GD {
+.area2_ct > .Guide {
   display: inline-block;
   width: calc(50% - 15px);
   margin-right: 30px;
   padding: 35px 45px 65px 35px;
-  background-color: #fff;
+  background-color: #ffffff;
   font-size: 0;
   text-align: center;
   vertical-align: top;
 }
-.guide_ct .guide_in {
-  margin-right: 0px;
-}
-.guide_ct .GD p {
+.area2_ct > .Guide > p {
   margin-bottom: 45px;
   padding-bottom: 35px;
   border-bottom: 1px solid #e6e6e6;
@@ -1201,32 +1237,33 @@ header {
   line-height: 1em;
   text-align: center;
 }
-.guide_ct .GD a {
+.area2_ct > .Guide > a {
   display: inline-block;
-  width: calc(33.33% - 0px);
+  width: 33.33%;
   text-align: center;
   vertical-align: top;
 }
-.guide_ct .GD a img {
+.area2_ct > .Guide > a > img {
   max-width: 100%;
 }
-.guide_ct .GD a span {
+.area2_ct > .Guide > a > span {
   display: block;
-  margin-top: 16px;
-  color: #000;
-  font-size: 16px;
+  margin-top: 8px;
   font-weight: 500;
   letter-spacing: -0.5px;
   line-height: 1em;
   word-break: keep-all;
 }
-.GD_top {
+.area2_ct > .guide_in {
+  margin-right: 0px;
+}
+.GD_icon_top {
   margin-top: 60px;
 }
 /* ============================== content3 */
 #content3 {
   width: 100%;
-  height: 937px;
+  height: auto;
   background-image: url(../img/Main_Visual2.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -1236,47 +1273,31 @@ header {
 .area_3 {
   max-width: 1180px;
   width: 100%;
-  height: 100%;
   margin: 0 auto;
-  padding-bottom: 100px;
+  padding: 100px 0;
 }
 /* area_3 > reserve */
-.reserve {
+.area_3 > .reserve {
   max-width: 1180px;
   width: 100%;
   padding: 55px 120px 50px 120px;
+  margin: 100px 0 0;
   background-color: #f5f5f5;
 }
-/* area_3 > reserve_txt */
-.reserve_txt {
+/* reserve > reserve_txt */
+.reserve > .reserve_txt {
   width: 100%;
   height: auto;
   text-align: center;
 }
-.reserve_txt p:first-child {
-  margin-bottom: 10px;
-  color: #00589e;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  line-height: 1em;
-}
-.reserve_txt p:last-child {
-  color: #000;
-  font-size: 48px;
-  font-weight: bold;
-  letter-spacing: -0.5px;
-  line-height: 1em;
-}
-/* area_3 > fieldset */
-.area_3 fieldset {
+/* reserve > fieldset */
+.reserve > fieldset {
   width: 100%;
   margin-top: 40px;
   text-align: center;
-  font-size: 0;
   border: none;
 }
-.area_3 fieldset legend {
+.reserve > fieldset > legend {
   display: block;
   width: 1px;
   height: 1px;
@@ -1285,115 +1306,141 @@ header {
   top: -1000em;
   left: 0;
 }
-/*  */
-/*  */
-/* 여기서부터 다시 작업하기 */
 /* fieldset - reserve_line */
 .reserve_line {
-  border-bottom: 1px solid #b3b4b8;
+  width: 100%;
   height: 37px;
+  border-bottom: 1px solid #b3b4b8;
+  font-size: 0;
+  text-align: left;
+  position: relative;
 }
-/* reserve_line - re_button */
-.reserve_line .re_button {
-  float: left;
+.reserve_line > button {
+  display: inline-block;
+  padding-bottom: 15px;
+  position: relative;
+  vertical-align: middle;
+  font-size: 0;
 }
-.reserve_line .re_button button {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 22px;
-  font-weight: 500;
-  text-align: center;
-  color: #5b5c5e;
-  background-color: #f5f5f5;
-  line-height: 1em;
-}
-.reserve_line .re_button button:last-child {
+.reserve_line > button:nth-of-type(2) {
   margin-left: 35px;
 }
-/* reserve_line - re_check */
-.reserve_line .re_check {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+.reserve_line > button.on:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #00589e;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.reserve_line > button span {
+  color: #5b5c5e;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  line-height: 1em;
+}
+.reserve_line > button.on span {
+  color: #00589e;
+}
+/* reserve_line > re_check */
+.reserve_line > .re_check {
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: -1px;
   color: #000;
   float: right;
 }
-/* re_check - both_way */
-.reserve_line .re_check .both_way {
+.reserve_line > .re_check span {
+  display: inline-block;
+  height: 20px;
   margin-right: 30px;
+  position: relative;
+  vertical-align: top;
+  font-size: 0;
 }
-.reserve_line .re_check .both_way label {
-  margin-left: 3px;
+.reserve_line > .re_check span:nth-of-type(2) {
+  margin-right: 0;
 }
-/* re_check - one_way */
-.reserve_line .re_check .one_way label {
-  margin-left: 3px;
-}
-/* fieldset - reserve_ct */
-.reserve_ct {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+.reserve_line > .re_check span input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  vertical-align: middle;
   color: #000;
 }
-/* reserve_ct - re_block1 */
-.reserve_ct .re_block1 {
-  width: calc(50% - 27.5px);
-  margin-right: 55px;
-  float: left;
+.reserve_line > .re_check span label {
+  display: inline-block;
+  margin-left: 3px;
+  padding: 0 1px 0 27px;
+  color: #000;
+  letter-spacing: -1px;
+  line-height: 20px;
+  vertical-align: top;
+  overflow: hidden;
+  cursor: pointer;
 }
-/* re_block1 - start */
-.re_block1 .start {
+/* fieldset > reserve_ct */
+.reserve_ct {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 0;
+}
+/* reserve_ct > Reserve */
+.reserve_ct .Reserve {
+  display: inline-block;
+  width: calc(50% - 27.5px);
+  min-height: 90px;
+  margin-right: 55px;
+  font-size: 0;
+  position: relative;
+  vertical-align: top;
+}
+.reserve_ct .Reserve:nth-of-type(2) {
+  margin-right: 0;
+}
+/* Reserve > re_option */
+.Reserve .re_option {
+  display: inline-block;
   width: calc(50% - 10px);
   margin-right: 20px;
-  float: left;
+  vertical-align: top;
 }
-.re_block1 .start label {
+.Reserve .re_option:nth-of-type(2) {
+  margin-right: 0;
+}
+.Reserve .re_option label {
   display: block;
-  margin: 25px 0 15px;
+  margin: 25px 0 15px 0;
+  font-weight: 500;
+  line-height: 1em;
+  text-align: left;
+  vertical-align: middle;
 }
-.re_block1 .start select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: #fff;
+.Reserve .re_option .re_block {
   width: 100%;
-  height: 59px;
-  border-bottom: 1px solid #cacdd4;
+  height: 60px;
   padding: 0 35px 0 13px;
-}
-.re_block1 .start select option {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 16px;
-  color: #000;
-  background-color: #fff;
-  padding: 0 2px 1px;
-}
-/* re_block1 - arrive */
-.re_block1 .arrive {
-  width: calc(50% - 10px);
-  float: left;
-}
-.re_block1 .arrive label {
-  display: block;
-  margin: 25px 0 15px;
-}
-.re_block1 .arrive select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 16px;
+  border-bottom: 1px solid #cacdd4;
   font-weight: bold;
-  background-color: #fff;
-  width: 100%;
-  height: 59px;
-  border-bottom: 1px solid #cacdd4;
-  padding: 0 35px 0 13px;
+  background-color: #ffffff;
+  vertical-align: middle;
 }
-.re_block1 .arrive select option {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 16px;
-  color: #000;
-  background-color: #fff;
-  padding: 0 2px 1px;
+.Reserve .re_option select option {
+  background-color: #ffffff;
+}
+.Reserve .re_option .re_line {
+  
 }
 /* reserve_ct - re_block2 */
 .reserve_ct .re_block2 {
