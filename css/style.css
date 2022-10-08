@@ -231,7 +231,7 @@ header {
   justify-content: right;
   text-align: right;
   font-size: 0;
-  z-index: 1001;
+  z-index: 1010;
   /* transition: 0.2s; */
 }
 .header_top > a {
@@ -285,7 +285,7 @@ header {
   left: 50%;
   top: -6px;
   overflow: hidden;
-  z-index: 1002;
+  z-index: 1020;
 }
 .lang.on {
   display: block;
@@ -718,7 +718,7 @@ header {
   left: 0;
   bottom: 100%;
   box-shadow: 0 5px 30px -15px #666;
-  z-index: 2;
+  z-index: 1;
 }
 .air_search_box .ASB_opt_list_ct {
   margin-top: 15px;
@@ -1244,11 +1244,13 @@ header {
   vertical-align: top;
 }
 .area2_ct > .Guide > a > img {
+  display: block;
   max-width: 100%;
+  margin: 0 auto;
 }
 .area2_ct > .Guide > a > span {
   display: block;
-  margin-top: 8px;
+  margin-top: 16px;
   font-weight: 500;
   letter-spacing: -0.5px;
   line-height: 1em;
@@ -1281,7 +1283,6 @@ header {
   max-width: 1180px;
   width: 100%;
   padding: 55px 120px 50px 120px;
-  margin: 100px 0 0;
   background-color: #f5f5f5;
 }
 /* reserve > reserve_txt */
@@ -1296,6 +1297,7 @@ header {
   margin-top: 40px;
   text-align: center;
   border: none;
+  font-size: 0;
 }
 .reserve > fieldset > legend {
   display: block;
@@ -1353,11 +1355,6 @@ header {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: -1px;
-  color: #000;
-  float: right;
 }
 .reserve_line > .re_check span {
   display: inline-block;
@@ -1370,19 +1367,21 @@ header {
 .reserve_line > .re_check span:nth-of-type(2) {
   margin-right: 0;
 }
+.reserve_line > .re_check span input {
+  vertical-align: middle;
+}
 .reserve_line > .re_check span input[type="radio"] {
   width: 18px;
   height: 18px;
   position: absolute;
   top: 1px;
   left: 1px;
-  vertical-align: middle;
   color: #000;
 }
 .reserve_line > .re_check span label {
   display: inline-block;
-  margin-left: 3px;
-  padding: 0 1px 0 27px;
+  /* margin-left: 3px; */
+  padding-left: 27px;
   color: #000;
   letter-spacing: -1px;
   line-height: 20px;
@@ -1409,138 +1408,143 @@ header {
 .reserve_ct .Reserve:nth-of-type(2) {
   margin-right: 0;
 }
-/* Reserve > re_option */
-.Reserve .re_option {
-  display: inline-block;
-  width: calc(50% - 10px);
-  margin-right: 20px;
-  vertical-align: top;
-}
-.Reserve .re_option:nth-of-type(2) {
+.reserve_ct .Reserve:nth-of-type(4) {
   margin-right: 0;
 }
-.Reserve .re_option label {
+.Reserve .RE_mg {
+  margin-right: 20px;
+}
+.reserve_ct .Reserve label {
   display: block;
   margin: 25px 0 15px 0;
   font-weight: 500;
   line-height: 1em;
   text-align: left;
-  vertical-align: middle;
 }
-.Reserve .re_option .re_block {
+.reserve_ct .Reserve select {
   width: 100%;
   height: 60px;
   padding: 0 35px 0 13px;
   border-bottom: 1px solid #cacdd4;
+  background: #ffffff url(/img/Icon_select_arr.png) no-repeat right 13px top 50%;
   font-weight: bold;
-  background-color: #ffffff;
   vertical-align: middle;
 }
-.Reserve .re_option select option {
+.reserve_ct .Reserve input {
+  display: inline-block;
+  width: calc(50% - 10px);
+  height: 60px;
+  padding: 0 10px;
+  border: none;
+  border-bottom: 1px solid #cacdd4;
+  font-weight: bold;
+  line-height: 41px;
+  vertical-align: middle;
+}
+.reserve_ct .Reserve select option {
   background-color: #ffffff;
 }
-.Reserve .re_option .re_line {
-  
+/* Reserve > re_option1 */
+.Reserve .re_option1 {
+  display: inline-block;
+  width: calc(50% - 10px);
+  vertical-align: top;
 }
-/* reserve_ct - re_block2 */
-.reserve_ct .re_block2 {
-  width: calc(50% - 27.5px);
-  margin-right: 0px;
-  float: left;
-}
-/* re_block2 - come_in_day */
-.re_block2 .come_in_day {
+/* Reserve > re_option2 */
+.Reserve .re_option2 {
   width: 100%;
+  font-size: 0;
 }
-.re_block2 .come_in_day label {
-  display: block;
-  margin: 25px 0 15px;
-}
-.re_block2 .come_in_day input:nth-of-type(1) {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
-  background-color: #fff;
-  height: 59px;
-  border-bottom: 1px solid #cacdd4;
-  padding: 0 10px;
-  width: calc(50% - 30px);
-  float: left;
-}
-.re_block2 .come_in_day span {
+.re_option2 .re_line {
+  display: inline-block;
   width: 20px;
+  font-size: 14px;
+  line-height: 40px;
   text-align: center;
-  line-height: 59px;
-  float: left;
+  vertical-align: middle;
 }
-.re_block2 .come_in_day input:nth-of-type(2) {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
-  background-color: #fff;
-  height: 59px;
-  border-bottom: 1px solid #cacdd4;
-  padding: 0 10px;
-  width: calc(50% - 30px);
-  float: left;
-}
-/* reserve_ct - guests */
-.reserve_ct .guests {
-  width: calc(50% - 27.5px);
-  margin-right: 55px;
-  float: left;
-}
-.guests label {
-  display: block;
-  margin: 25px 0 15px;
-}
-.guests select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: #fff;
+.re_option2 .re_button {
+  display: inline-block;
   width: 100%;
-  height: 59px;
-  border-bottom: 1px solid #cacdd4;
+  height: 60px;
   padding: 0 35px 0 13px;
+  border: none;
+  border-bottom: 1px solid #cacdd4;
+  background: #fff url(/img/Icon_select_arr.png) no-repeat right 13px top 50%;
   font-weight: bold;
+  text-align: left;
 }
-.guests select option {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 16px;
-  color: #000;
-  background-color: #fff;
-  padding: 0 2px 1px;
-}
-/* reserve_ct - seats */
-.reserve_ct .seats {
-  width: calc(50% - 27.5px);
-  margin-right: 0px;
-  float: left;
-}
-.seats label {
+.re_option2 .re_type {
+  /* display: none; */
   display: block;
-  margin: 25px 0 15px;
-}
-.seats select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: #fff;
   width: 100%;
-  height: 59px;
-  border-bottom: 1px solid #cacdd4;
-  padding: 0 35px 0 13px;
+  height: auto;
+  box-shadow: 0 5px 30px -15px #666;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  z-index: 10;
+}
+.re_type .re_type_list {
+  width: 100%;
+  height: auto;
+}
+.re_type .re_type_list > ul {
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #f5f8fa;
+  letter-spacing: -1px;
+}
+.re_type .re_type_list > ul > li {
+  line-height: 40px;
+  overflow: hidden;
+}
+.re_type .re_type_list > ul > li b {
+  float: left;
   font-weight: bold;
 }
-.seats select option {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
-  font-size: 16px;
-  color: #000;
-  background-color: #fff;
-  padding: 0 2px 1px;
+.re_type .re_type_list > ul > li em {
+  margin-left: 5px;
+  color: #666;
+  font-style: normal;
+  /* font-size: 15px; */
+  font-size: 14px;
+}
+.re_type .re_type_list .re_count {
+  float: right;
+  width: 135px;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  font-size: 0;
+  text-align: center;
+}
+.re_type .re_type_list .re_count > button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-indent: -99999px;
+  vertical-align: top;
+  overflow: hidden;
+}
+.re_type .re_type_list .re_count .count_del {
+  background: url(/img/Ico_count_del.png) no-repeat center;
+}
+.re_type .re_type_list .re_count .count_add {
+  background: url(/img/Icon_count_add.png) no-repeat center;
+}
+.re_type .re_type_list .re_count > input {
+  width: calc(100% - 80px);
+  /* height: 40px; */
+  height: 38.5px;
+  border: 1px solid #d9d9d9;
+  border-top: none;
+  border-bottom: none;
+  line-height: 41px;
+  text-align: center;
+  vertical-align: middle;
 }
 /* fieldset - reserve_bt */
 fieldset .reserve_bt {
@@ -1548,7 +1552,8 @@ fieldset .reserve_bt {
   width: 230px;
 }
 .reserve_bt input {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 17px;
   font-weight: bold;
   color: #fff;
@@ -1578,7 +1583,8 @@ fieldset .reserve_bt {
 }
 /* area_4 - parking_state */
 .area_4 .parking_state {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   color: #000;
   width: calc(50% - 20px);
   height: 644px;
@@ -1646,7 +1652,8 @@ fieldset .reserve_bt {
   text-indent: -9999px;
 }
 .parking1 .pk_st {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: right;
@@ -1693,7 +1700,8 @@ fieldset .reserve_bt {
   text-indent: -9999px;
 }
 .parking2 .pk_st {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: right;
@@ -1740,7 +1748,8 @@ fieldset .reserve_bt {
   text-indent: -9999px;
 }
 .parking3 .pk_st {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: right;
@@ -1787,7 +1796,8 @@ fieldset .reserve_bt {
   text-indent: -9999px;
 }
 .parking4 .pk_st {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: right;
@@ -1834,7 +1844,8 @@ fieldset .reserve_bt {
   text-indent: -9999px;
 }
 .parking5 .pk_st {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: 500;
   text-align: right;
@@ -1873,7 +1884,8 @@ fieldset .reserve_bt {
 /* parking_reserve - parking_re_ct */
 .parking_re_ct {
   width: 100%;
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
 }
 /* parking_re_ct - pk_in_day */
 .parking_re_ct .pk_in_day {
@@ -1893,7 +1905,8 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_in_day input {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -1907,7 +1920,8 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_in_day input + select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -1921,7 +1935,8 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_in_day input + select + select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -1952,7 +1967,8 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_out_day input {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -1966,7 +1982,8 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_out_day input + select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -1980,7 +1997,8 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_out_day input + select + select {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   text-align: left;
@@ -2024,7 +2042,8 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_select select option {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   color: #000;
   background-color: #fff;
@@ -2037,7 +2056,8 @@ fieldset .reserve_bt {
   float: left;
 }
 .pk_reserve input {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   font-size: 16px;
   font-weight: bold;
   width: 100%;
@@ -2123,12 +2143,14 @@ fieldset .reserve_bt {
   height: auto;
   margin: 0 auto;
   padding: 175px 0 100px;
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   color: #000;
 }
 /* area_5 - traffic_txt */
 .traffic_txt {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   color: #000;
   text-align: center;
 }
@@ -2308,12 +2330,14 @@ fieldset .reserve_bt {
   height: auto;
   margin: 0 auto;
   padding: 165px 0 100px;
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   color: #000;
 }
 /* area_6 - service_txt */
 .service_txt {
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   color: #000;
   text-align: center;
 }
@@ -2500,7 +2524,8 @@ fieldset .reserve_bt {
   height: auto;
   margin: 0 auto;
   padding: 49px 0 46px 0;
-  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움, Dotum, sans-serif;
+  font-family: "Roboto", "Noto Sans KR", "Malgun Gothic", 굴림, Gulim, 돋움,
+    Dotum, sans-serif;
   color: #fff;
   position: relative;
 }
