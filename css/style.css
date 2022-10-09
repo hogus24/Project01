@@ -24,6 +24,8 @@
 }
 /* =================================== wrap */
 #wrap {
+  width: 100%;
+  height: auto;
 }
 /* ============================== pop_up */
 #pop_up {
@@ -866,9 +868,9 @@ header {
 }
 /* ==================== content1 */
 #content1 {
-  background-color: #ffffff;
   width: 100%;
   height: auto;
+  background-color: #ffffff;
 }
 /* content1 > area_1 */
 #content1 .area_1 {
@@ -877,51 +879,50 @@ header {
   height: auto;
   margin: 0 auto;
   padding: 70px 0 0;
-  text-align: center;
 }
-/* area_1 > airProcess_txt */
-.airProcess_txt {
+/* area_1 > area1_txt */
+.area1_txt {
   width: 100%;
   height: auto;
   text-align: center;
 }
-.airProcess_txt p:nth-child(1) {
-  color: #00589e;
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  line-height: 1em;
-  margin-bottom: 10px;
-}
-.airProcess_txt p:nth-child(2) {
-  font-size: 48px;
-  font-weight: bold;
-  letter-spacing: -0.5px;
-  line-height: 1em;
-}
-.airProcess_txt p:nth-child(3) {
+.area1_txt p:nth-child(3) {
+  padding-top: 15px;
   font-size: 18px;
   letter-spacing: -0.5px;
   line-height: 1em;
-  padding-top: 15px;
 }
-/* area_1 > airProcess_ct */
-.airProcess_ct {
+/* area_1 > area1_ct */
+.area1_ct {
   max-width: 1180px;
   width: 100%;
   height: auto;
   margin: 20px auto 0;
 }
-/* airProcess_ct > airProcess_time */
-.airProcess_time {
+/* area1_ct > air_process */
+.area1_ct .air_process {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 34px;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+/* air_process > process_header */
+.air_process .process_header {
   width: 100%;
 }
-/* airProcess_time > processTime */
-.processTime {
-  position: relative;
+/* process_header > pro_time */
+.process_header .pro_time {
   height: 80px;
+  position: relative;
 }
-.processTime .totalTime {
+/* pro_time > total_time */
+.pro_time .total_time {
   display: block;
   color: #870f69;
   font-size: 80px;
@@ -929,115 +930,117 @@ header {
   line-height: 80px;
   text-align: center;
 }
-.processTime .totalTime span {
+.pro_time .total_time span {
   color: #000;
   font-size: 40px;
   font-weight: bold;
 }
-/* airProcess_time > processState */
-.processState {
-  position: relative;
+/* process_header > pro_state */
+.process_header .pro_state {
   margin-top: 30px;
+  position: relative;
 }
-/* processState > state_current */
-.state_current {
+/* pro_state > sta_current */
+.pro_state .sta_current {
   float: left;
   font-size: 0;
 }
-.state_current * {
+.pro_state .sta_current * {
   display: inline-block;
   vertical-align: middle;
+  letter-spacing: -0.5px;
 }
-.state_current .current_time {
+.pro_state .sta_current .now_time {
   font-size: 24px;
   font-weight: bold;
 }
-.state_current span {
-  font-size: 22px;
+.pro_state .sta_current span {
   padding: 0 10px;
+  font-size: 22px;
 }
-.state_current button {
+.pro_state .sta_current button {
   display: inline-block;
   width: 23px;
   height: 20px;
-  background-image: url(../img/Icon_process_reload.png);
+  background-image: url(/img/Icon_process_reload.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  text-indent: -99999px;
   vertical-align: middle;
+  text-indent: -99999px;
 }
-/* processState > state_type */
-.state_type {
+/* pro_state > sta_type */
+.pro_state .sta_type {
   position: absolute;
   top: -60px;
   right: 0;
 }
-.state_type button {
+.pro_state .sta_type button {
   display: inline-block;
   font-size: 22px;
 }
-.state_type button.on {
+.pro_state .sta_type button:nth-of-type(2) {
+  margin-left: 15px;
+}
+.pro_state .sta_type button.on {
   font-weight: bold;
   border-bottom: solid 5px #000;
 }
-.state_type button + button {
-  margin-left: 15px;
-}
-/* processState > state_status */
-.state_status {
+/* pro_state > sta_status */
+.pro_state .sta_status {
   float: right;
 }
-.state_status ul li {
+.pro_state .sta_status ul li {
   float: left;
   margin-left: 30px;
 }
-.state_status ul li:nth-of-type(1) {
+.pro_state .sta_status ul li:nth-of-type(1) {
   margin-left: 0;
 }
-.state_status ul li span {
+.pro_state .sta_status ul li span {
   display: block;
-  position: relative;
   font-size: 18px;
+  position: relative;
 }
-.state_status ul li span:before {
+.pro_state .sta_status ul li span:before {
+  content: "";
   width: 10px;
   height: 10px;
   border-radius: 100%;
-  content: "";
   position: absolute;
-  top: 10px;
-  left: -15px;
+  top: -6px;
+  left: -8px;
 }
-.state_status ul li .st_good:before {
-  background-color: #589ce4;
+.pro_state .sta_status ul li .st_good:before {
+  background: #589ce4;
 }
-.state_status ul li .st_normal:before {
-  background-color: #62d144;
+.pro_state .sta_status ul li .st_normal:before {
+  background: #62d144;
 }
-.state_status ul li .st_busy:before {
-  background-color: #f98f39;
+.pro_state .sta_status ul li .st_busy:before {
+  background: #f98f39;
 }
-.state_status ul li .verybusy:before {
-  background-color: #d93436;
+.pro_state .sta_status ul li .verybusy:before {
+  background: #d93436;
 }
-/* airProcess_ct > airport_mosion */
-.airport_mosion {
+/* air_process > process_mosion */
+.air_process .process_mosion {
   width: 100%;
   margin-top: 0;
   overflow-x: auto;
 }
-/* airport_mosion > mosion_top */
-.mosion_top {
+/* process_mosion > mosion_top */
+.process_mosion .mosion_top {
   width: 1180px;
   height: 390px;
-  background-image: url(../img/Img_mosion_bg.png);
+  background-image: url(/img/Img_mosion_bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
 }
-.walkLine {
+/* mosion_top > walk_line */
+.mosion_top .walk_line {
   width: calc(100% - 168px);
   height: 95px;
   position: absolute;
@@ -1045,27 +1048,57 @@ header {
   left: 168px;
   overflow: hidden;
 }
-.walkLine_ct {
-  width: 60px;
-  height: 95px;
+/* walk_line > walk_line_ct */
+.walk_line .walk_line_ct {
   position: absolute;
   top: 0;
   left: 0;
-  /* opacity: 1; 임시설정 */
-  /* opacity: 0; */
-  opacity: 1;
-}
-/* 애니메이션 임시설정 */
-#content1:hover .walkLine_ct {
-  left: calc(100% - 168px);
-  transition: all 8s cubic-bezier(0, 0, 0.87, 1.08);
-}
-.human {
   width: 60px;
   height: 95px;
-  background: url(../img/Icon_walk_man.png) repeat-x;
-  position: relative;
+  opacity: 0;
 }
+.walk_line .walk_line_ct.on {
+  animation: mosion linear 13s infinite;
+}
+@keyframes mosion {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    left: 110%;
+    opacity: 0;
+  }
+}
+/* walk_line_ct > human */
+.walk_line_ct .human {
+  position: relative;
+  width: 60px;
+  height: 95px;
+  background: url(/img/Icon_walk_human.png) repeat-x;
+}
+.walk_line_ct .human.on {
+  animation: walk 0.7s steps(2) infinite;
+}
+@keyframes walk {
+  0% {
+    background-position: 0;
+    left: 0;
+  }
+  100% {
+    background-position: -120px;
+  }
+}
+/* mosion_top > ul */
 .mosion_top ul {
   width: 100%;
   position: absolute;
@@ -1075,15 +1108,32 @@ header {
 .mosion_top ul li {
   width: calc(100% / 7);
   height: 50px;
-  color: #fff;
+  color: #ffffff;
   line-height: 50px;
   text-align: center;
   float: left;
 }
-/* airport_mosion > mosion_bottom */
-.mosion_bottom {
+/* process_mosion > mosion_bottom */
+.process_mosion .mosion_bottom {
   width: 1180px;
   height: 70px;
+}
+/* mosion_bottom > MSB */
+.mosion_bottom .MSB {
+  height: 35px;
+  border: dashed 1px #4c77ab;
+  border-top: 0;
+  float: left;
+  position: relative;
+}
+.mosion_bottom .MSB:before {
+  content: "";
+  width: 10px;
+  height: 7px;
+  background-image: url(/img/Icon_mosion_arr.png);
+  position: absolute;
+  top: 0;
+  right: -5px;
 }
 .mosion_bottom .step_1 {
   width: 340px;
@@ -1105,21 +1155,7 @@ header {
   height: 35px;
   margin-left: 5px;
 }
-.mosion_bottom .MSB {
-  border: dashed 1px #4c77ab;
-  border-top: 0;
-  float: left;
-  position: relative;
-}
-.mosion_bottom .MSB:before {
-  width: 10px;
-  height: 7px;
-  background-image: url(../img/Icon_mosion_bottom_arr.png);
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -5px;
-}
+/* MSB > MSB_ct */
 .MSB .MSB_ct {
   width: 140px;
   height: 40px;
@@ -1132,39 +1168,20 @@ header {
 .MSB .MSB_ct p {
   height: 40px;
   border-radius: 40px;
-  background-color: #fff;
-  color: #fff;
+  background: #ffffff;
+  color: #ffffff;
+  text-align: center;
   position: relative;
 }
-.MSB .MSB_ct p:before {
-  position: absolute;
-  top: 0;
-  right: 0;
+.MSB .MSB_ct p:after {
   content: "";
-  width: 70px;
-  height: 40px;
-  border-radius: 40px;
-  content: none;
-}
-.MSB .MSB_ct p em {
+  clear: both;
   display: block;
-  text-indent: -9999px;
-}
-.MSB .MSB_ct p strong {
-  display: block;
-  width: 100%;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
 }
 .MSB .MSB_ct p strong span {
-  color: #fff;
+  color: #ffffff;
   font-size: 20px;
+  font-weight: 500;
 }
 .MSB .MSB_ct .MSB_good {
   background-color: #589ce4;
@@ -1178,18 +1195,45 @@ header {
 .MSB .MSB_ct .MSB_verybusy {
   background-color: #d93436;
 }
-/* airProcess_ct > ul.airport_mosion_txt */
-.airProcess_ct .airport_mosion_txt {
+.MSB .MSB_ct p em {
+  display: block;
+  color: red;
+  text-indent: -99999px;
+}
+.MSB .MSB_ct p strong {
+  display: block;
+  width: 100%;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  text-align: center;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+/* air_process > process_txt */
+.air_process .process_txt {
   margin-top: 10px;
 }
-.airport_mosion_txt li {
-  letter-spacing: -1.2px;
+.air_process .process_txt li {
+  padding-left: 20px;
+  /* letter-spacing: -1.2px; */
+  letter-spacing: -2px;
   text-align: left;
   position: relative;
 }
-.airport_mosion_txt li span {
+.air_process .process_txt li:before {
+  content: "※";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.air_process .process_txt li span {
   color: #a60436;
   font-weight: 700;
+  letter-spacing: -1.2px;
 }
 /* ==================== content2 */
 #content2 {
@@ -1198,7 +1242,7 @@ header {
   background-color: #e9edf4;
 }
 /* content2 > area_2 */
-.area_2 {
+#content2 > .area_2 {
   max-width: 1180px;
   width: 100%;
   height: auto;
@@ -1277,7 +1321,7 @@ header {
   background-size: cover;
 }
 /* content3 > area_3 */
-.area_3 {
+#content3 > .area_3 {
   max-width: 1180px;
   width: 100%;
   margin: 0 auto;
@@ -1636,7 +1680,7 @@ header {
   background-color: #e9edf4;
 }
 /* content4 > area_4 */
-.area_4 {
+#content4 > .area_4 {
   max-width: 1180px;
   width: 100%;
   height: auto;
@@ -2100,7 +2144,6 @@ footer .footer_info {
   text-align: left;
   white-space: nowrap;
   position: relative;
-  float: left;
 }
 /* footer_info > copyright */
 .footer_info .copyright {

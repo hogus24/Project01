@@ -636,7 +636,7 @@
                       <select
                         name="setMin"
                         class="ATS"
-                        id="setTime"
+                        id="setMin"
                         title="시작시간-분"
                       >
                         <option value="00" selected="selected">00</option>
@@ -707,7 +707,7 @@
                       <select
                         name="endHour"
                         class="ATS"
-                        id="setTime"
+                        id="endTime"
                         title="시작시간-시"
                       >
                         <option value="00" selected="selected">00</option>
@@ -738,7 +738,7 @@
                       <select
                         name="endMin"
                         class="ATS"
-                        id="setTime"
+                        id="endMin"
                         title="시작시간-분"
                       >
                         <option value="00" selected="selected">00</option>
@@ -894,7 +894,7 @@
                     <input
                       type="text"
                       name="airCarrier"
-                      id=""
+                      id="airName"
                       placeholder="편명 입력"
                       title="편명 입력"
                     />
@@ -918,145 +918,154 @@
         <div id="contents">
           <div id="content1">
             <div class="area_1">
-              <div class="airProcess_txt">
-                <p>BOARDING PROCESS TIME</p>
-                <p>공항 탑승수속 소요시간 안내</p>
+              <div class="area1_txt">
+                <p class="mini_title">BOARDING PROCESS TIME</p>
+                <p class="big_title">공항 탑승수속 소요시간 안내</p>
                 <p>항공권 발권부터 항공기 출발까지 실시간 평균 소요시간 안내</p>
               </div>
-              <!-- // .airProcess_txt -->
-              <div class="airProcess_ct">
-                <div class="airProcess_time">
-                  <div class="processTime">
-                    <strong class="totalTime">00<span>분</span></strong>
+              <!-- // .area1_txt -->
+              <div class="area1_ct">
+                <div class="air_process cf">
+                  <div class="process_header">
+                    <div class="pro_time">
+                      <strong class="total_time">00<span>분</span></strong>
+                    </div>
+                    <!-- // .pro_time -->
+                    <div class="pro_state cf">
+                      <div class="sta_current">
+                        <strong class="now_time">PM 00:00</strong>
+                        <span>기준</span>
+                        <button type="button">리로드</button>
+                      </div>
+                      <!-- // .sta_current -->
+                      <div class="sta_type">
+                        <button type="button" class="st_domestic on">
+                          국내선
+                        </button>
+                        <button
+                          type="button"
+                          class="st_international"
+                          onclick="alert('아직 준비중입니다.')"
+                        >
+                          국제선
+                        </button>
+                      </div>
+                      <!-- // .sta_type -->
+                      <div class="sta_status cf">
+                        <ul>
+                          <li>
+                            <span class="st_good">원활</span>
+                          </li>
+                          <li>
+                            <span class="st_normal">보통</span>
+                          </li>
+                          <li>
+                            <span class="st_busy">혼잡</span>
+                          </li>
+                          <li>
+                            <span class="verybusy">매우혼잡</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- // .sta_status -->
+                    </div>
+                    <!-- // .pro_state -->
                   </div>
-                  <!-- // .processTime -->
-                  <div class="processState cf">
-                    <div class="state_current">
-                      <strong class="current_time">PM 00:00</strong>
-                      <span>기준</span>
-                      <button type="button">리로드</button>
-                    </div>
-                    <!-- // .state_current -->
-                    <div class="state_type">
-                      <button type="button" class="st_domestic on">
-                        국내선
-                      </button>
-                      <button
-                        type="button"
-                        class="st_international"
-                        onclick="alert('아직 준비중입니다.')"
-                      >
-                        국제선
-                      </button>
-                    </div>
-                    <!-- // .state_type -->
-                    <div class="state_status">
+                  <!-- // .process_header -->
+                  <div class="process_mosion">
+                    <div class="mosion_top">
+                      <div class="walk_line">
+                        <div class="walk_line_ct on">
+                          <div class="human on"></div>
+                        </div>
+                        <!-- // .walk_line_ct -->
+                      </div>
+                      <!-- // .walk_line -->
                       <ul class="cf">
-                        <li>
-                          <span class="st_good">원활</span>
-                        </li>
-                        <li>
-                          <span class="st_normal">보통</span>
-                        </li>
-                        <li>
-                          <span class="st_busy">혼잡</span>
-                        </li>
-                        <li>
-                          <span class="verybusy">매우혼잡</span>
-                        </li>
+                        <li>공항 도착(주차)</li>
+                        <li>탑승권 자동발권</li>
+                        <li>수하물 위탁</li>
+                        <li>신분확인</li>
+                        <li>보안검색</li>
+                        <li>탑승시간</li>
+                        <li>출발</li>
                       </ul>
                     </div>
-                    <!-- // .state_status -->
+                    <!-- // .mosion_top -->
+                    <div class="mosion_bottom">
+                      <div class="MSB step_1">
+                        <div class="MSB_ct cf">
+                          <p class="MSB_busy">
+                            <em
+                              >탑승권 자동발권-수하물 위탁-신분확인 까지
+                              소요시간</em
+                            >
+                            <strong>
+                              21<span class="MSB_minute">분</span>
+                            </strong>
+                          </p>
+                        </div>
+                        <!-- // .MSB_ct 1 -->
+                      </div>
+                      <!-- // .step_1 -->
+                      <div class="MSB step_2">
+                        <div class="MSB_ct cf">
+                          <p class="MSB_good">
+                            <em>신분확인-보안검색 까지 소요시간</em>
+                            <strong>
+                              4<span class="MSB_minute">분</span>
+                            </strong>
+                          </p>
+                        </div>
+                        <!-- // .MSB_ct 2 -->
+                      </div>
+                      <!-- // .step_2 -->
+                      <div class="MSB step_3">
+                        <div class="MSB_ct cf">
+                          <p class="MSB_verybusy">
+                            <em>보안검색-탑승시간 까지 소요시간</em>
+                            <strong>
+                              24<span class="MSB_minute">분</span>
+                            </strong>
+                          </p>
+                        </div>
+                        <!-- // .MSB_ct 3 -->
+                      </div>
+                      <!-- // .step_3 -->
+                      <div class="MSB step_4">
+                        <div class="MSB_ct cf">
+                          <p class="MSB_normal">
+                            <em>탑승시간-출발 까지 소요시간</em>
+                            <strong>
+                              10<span class="MSB_minute">분</span>
+                            </strong>
+                          </p>
+                        </div>
+                        <!-- // .MSB_ct 4 -->
+                      </div>
+                      <!-- // .step_4 -->
+                    </div>
+                    <!-- // .mosion_bottom -->
                   </div>
-                  <!-- // .air_state -->
+                  <!-- // .process_mosion -->
+                  <ul class="process_txt">
+                    <li>
+                      <span>탑승권 발권 및 수하물 위탁</span> 가능 시간은
+                      항공사별 정책에 따라 달라질 수 있으며, 일반적으로
+                      <span>국내선 항공기는 출발 예정 시각 30분전까지 가능</span
+                      >함에 유의하시기 바랍니다.
+                    </li>
+                    <li>
+                      해당 소요시간 안내서비스는 탑승수속 구간별 여객이 체류하고
+                      있는 <span>평균소요시간</span>을 안내하는 것으로, 기상상황
+                      등 예상치 못한 요인에 따라 실제 소요시간과는 차이가 있을
+                      수 있습니다.
+                    </li>
+                  </ul>
                 </div>
-                <!-- // .airProcess_time -->
-                <div class="airport_mosion">
-                  <div class="mosion_top">
-                    <div class="walkLine">
-                      <div class="walkLine_ct">
-                        <div class="human"></div>
-                      </div>
-                      <!-- // .walkLine_ct -->
-                    </div>
-                    <!-- // .walkLine -->
-                    <ul class="cf">
-                      <li>공항 도착(주차)</li>
-                      <li>탑승권 자동발권</li>
-                      <li>수하물 위탁</li>
-                      <li>신분확인</li>
-                      <li>보안검색</li>
-                      <li>탑승시간</li>
-                      <li>출발</li>
-                    </ul>
-                  </div>
-                  <!-- // .mosion_top -->
-                  <div class="mosion_bottom cf">
-                    <div class="MSB step_1">
-                      <div class="MSB_ct">
-                        <p class="MSB_busy">
-                          <em
-                            >탑승권 자동발권-수하물 위탁-신분확인 까지
-                            소요시간</em
-                          >
-                          <strong>
-                            21<span class="MSB_minute">분</span>
-                          </strong>
-                        </p>
-                      </div>
-                    </div>
-                    <!-- // .step_1 -->
-                    <div class="MSB step_2">
-                      <div class="MSB_ct">
-                        <p class="MSB_good">
-                          <em>신분확인-보안검색 까지 소요시간</em>
-                          <strong> 4<span class="MSB_minute">분</span> </strong>
-                        </p>
-                      </div>
-                    </div>
-                    <!-- // .step_2 -->
-                    <div class="MSB step_3">
-                      <div class="MSB_ct">
-                        <p class="MSB_verybusy">
-                          <em>보안검색-탑승시간 까지 소요시간</em>
-                          <strong>
-                            24<span class="MSB_minute">분</span>
-                          </strong>
-                        </p>
-                      </div>
-                    </div>
-                    <!-- // .step_3 -->
-                    <div class="MSB step_4">
-                      <div class="MSB_ct">
-                        <p class="MSB_normal">
-                          <em>탑승시간-출발 까지 소요시간</em>
-                          <strong>
-                            10<span class="MSB_minute">분</span>
-                          </strong>
-                        </p>
-                      </div>
-                    </div>
-                    <!-- // .step_4 -->
-                  </div>
-                  <!-- // .mosion_bottom -->
-                </div>
-                <!-- // .airport_mosion -->
-                <ul class="airport_mosion_txt">
-                  <li>
-                    ※ &nbsp;<span>탑승권 발권 및 수하물 위탁</span> 가능 시간은
-                    항공사별 정책에 따라 달라질 수 있으며, 일반적으로
-                    <span>국내선 항공기는 출발 예정 시각 30분전까지 가능</span
-                    >함에 유의하시기 바랍니다.
-                  </li>
-                  <li>
-                    ※ &nbsp;해당 소요시간 안내서비스는 탑승수속 구간별 여객이
-                    체류하고 있는 <span>평균소요시간</span>을 안내하는 것으로,
-                    기상상황 등 예상치 못한 요인에 따라 실제 소요시간과는 차이가
-                    있을 수 있습니다.
-                  </li>
-                </ul>
+                <!-- // .air_process -->
               </div>
-              <!-- // .airProcess_ct -->
+              <!-- // .area1_ct -->
             </div>
             <!-- // .area_1 -->
           </div>
@@ -1459,7 +1468,7 @@
             </ul>
             <div class="ft_pop_up">
               <section>
-                <h1 class="ft_pop_title">패밀리사이트</h1>
+                <h2 class="ft_pop_title">패밀리사이트</h2>
                 <div class="ft_pop_ct">
                   <div class="ft_pop_in">
                     <div class="ft_pop_in_ct">
