@@ -25,6 +25,21 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- 해야할 일 : 올리기 전에 주석 전부 지우기 ~~ -->
+    <style>
+      .ui-datepicker-trigger {
+        width: 18px;
+        height: 19px;
+        overflow: hidden;
+        position: absolute;
+        bottom: 19px;
+      }
+      .ui-datepicker-trigger:nth-of-type(1) {
+        left: 183px;
+      }
+      .ui-datepicker-trigger:nth-of-type(2) {
+        right: 10px;
+      }
+    </style>
   </head>
   <body>
     <ul class="skip_menu">
@@ -334,6 +349,16 @@
           <!-- // .nav_util -->
         </div>
         <!-- // .header-nav -->
+        <div class="header_sticky">
+          <ul>
+            <li><a href="#content1">탑승수속 소요시간</a></li>
+            <li><a href="#content2">공항가이드</a></li>
+            <li><a href="#content3">항공권예약</a></li>
+            <li><a href="#content4">교통안내</a></li>
+            <li><a href="#content5">시설안내</a></li>
+          </ul>
+        </div>
+        <!-- // .header_sticky -->
       </header>
       <!-- // #header -->
       <div id="container">
@@ -1016,10 +1041,10 @@
                     <!-- // .Reserve 1 -->
                     <div class="Reserve">
                       <div class="re_option2">
-                        <label>가는날 / 오는날</label>
-                        <input type="text" class="re_block2" name="depDate" id="go_day" placeholder="가는날 입력" title="가는날 입력" />
+                        <label for="calender">가는날 / 오는날</label>
+                        <input type="text" class="re_block2" name="depDate" id="go_day" placeholder="가는날 입력" title="가는날 입력" autocomplete="off" />
                         <span class="re_line">~</span>
-                        <input type="text" class="re_block2" name="arrDate" id="come_day" placeholder="오는날 입력" title="오는날 입력" />
+                        <input type="text" class="re_block2" name="arrDate" id="come_day" placeholder="오는날 입력" title="오는날 입력" autocomplete="off" />
                       </div>
                       <!-- // .re_option2 -->
                     </div>
@@ -1278,12 +1303,13 @@
     <!-- // #wrap -->
 
     <!-- JS / JQ -->
-    <!-- CDN 방식 X, 다운로드 방식 O -->
-    <!-- jQuery Core 1.12.4 minified 을 사용할 것 (IE 호환성 문제) -->
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <!-- <script src="js/sticky.js"></script> -->
     <script src="js/gnb.js"></script>
-    <script src="js/click.js"></script>
     <script src="js/slide.js"></script>
+    <script src="js/click.js"></script>
+    <script src="js/date.js"></script>
   </body>
 </html>

@@ -1,6 +1,8 @@
 $(function () {
   var slideShow = $(".banner_slide");
   var imagesSrc = ["Img_banner1.png", "Img_banner2.png", "Img_banner3.png"];
+  var slideBtt = $(".banner_slide_btt > ul > li");
+
   $.each(imagesSrc, function (a, o) {
     var image = $("<img>");
     image.attr("src", "img/" + o);
