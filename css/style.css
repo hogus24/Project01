@@ -91,7 +91,7 @@ header {
   display: inline-block;
   height: 19px;
   padding-right: 17px;
-  background: url(../img/Icon_lang_box_down.png) no-repeat right center;
+  background: url(../img/Icon_langBox_Darr.png) no-repeat right center;
   color: #ffffff;
   font-size: 15px;
   font-weight: 300;
@@ -101,7 +101,7 @@ header {
   overflow: hidden;
 }
 .header_top.gnbOn .lang_box button {
-  background-image: url(../img/Icon_lang_box_down_gray.png);
+  background-image: url(../img/Icon_langBox_Darr_gray.png);
 }
 /* lang_box > lang */
 .lang_box .lang {
@@ -140,14 +140,14 @@ header {
 }
 .lang_box .lang ul li a.on {
   display: block;
-  background: url(../img/Icon_lang_box_up.png) no-repeat right center;
+  background: url(../img/Icon_langBox_Uarr.png) no-repeat right center;
 }
 /* header_top > header_pop_btt */
 .header_top .header_pop_btt {
   display: inline-block;
   height: 20px;
   padding-right: 28px;
-  background: url(../img/Icon_pop_down.png) no-repeat right center;
+  background: url(../img/Icon_pop_Darr.png) no-repeat right center;
   color: #ffffff;
   font-size: 15px;
   font-weight: 300;
@@ -157,7 +157,7 @@ header {
   overflow: hidden;
 }
 .header_top.gnbOn .header_pop_btt {
-  background-image: url(../img/Icon_pop_down_black.png);
+  background-image: url(../img/Icon_pop_Darr_black.png);
 }
 /* header > header_nav */
 .header_nav {
@@ -286,7 +286,7 @@ nav .gnb {
   position: absolute;
   top: -9px;
   left: -20px;
-  background-image: url(../img/Img_main_gnb.png);
+  background-image: url(../img/Img_mainGnb_bg.png);
   background-repeat: no-repeat;
   background-position: center center;
   z-index: -1;
@@ -497,7 +497,7 @@ nav .gnb {
   border-radius: 20px;
   margin-left: 0px;
   padding: 0 39px 0 19px;
-  background: url(../img/Icon_lang_box_down.png) no-repeat right 18px center;
+  background: url(../img/Icon_langBox_Darr.png) no-repeat right 18px center;
   font-size: 15px;
   /* line-height: 40px; */
   text-align: left;
@@ -507,7 +507,7 @@ nav .gnb {
 .header_nav.gnbOn .nav_util .move_airport > button {
   color: #666666;
   border: 1px solid #dbdee1;
-  background-image: url(../img/Icon_lang_box_down_gray.png);
+  background-image: url(../img/Icon_langBox_Darr_gray.png);
 }
 /* move_airport > move_airport_list */
 .move_airport_list {
@@ -558,7 +558,7 @@ nav .gnb {
   bottom: 25px;
   width: 11px;
   height: 11px;
-  background-image: url(../img/Icon_lang_box_close.png);
+  background-image: url(../img/Icon_langBox_close.png);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #fff;
@@ -817,6 +817,8 @@ header .header_sticky.on {
 }
 /* air_search > air_search_box */
 .air_search_box {
+  /* display: none; */
+  display: block;
   width: 100%;
   height: 100px;
   margin-top: 15px;
@@ -826,6 +828,9 @@ header .header_sticky.on {
   text-align: left;
   position: relative;
 }
+/* .air_search_box.on {
+  display: block;
+} */
 .air_search_box > a {
   color: #fff;
   font-size: 20px;
@@ -1662,7 +1667,8 @@ header .header_sticky.on {
   height: 60px;
   padding: 0 35px 0 13px;
   border-bottom: 1px solid #cacdd4;
-  background: #ffffff url(../img/Icon_select_arr.png) no-repeat right 13px top 50%;
+  background: #ffffff url(../img/Icon_select_arr.png) no-repeat right 13px top
+    50%;
   font-weight: bold;
   vertical-align: middle;
 }
